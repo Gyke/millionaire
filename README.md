@@ -59,7 +59,7 @@
 - [ ] **+2 балла.** Вместо классической подсказки **“Звонок другу”** делаете “**Право на ошибку”.** Игрок один раз может ответить не верно на вопрос и игра на этом не закончится.
 
 ## Полезные ссылки
- - [Макет в фигме]("https://www.figma.com/file/qHoil3MxITKKHeOTSTxj0s/Game-"Who-is-wants-to-be-a-Millionare"?node-id=0%3A1")
+ - [Макет в фигме]("https://www.figma.com/file/qHoil3MxITKKHeOTSTxj0s/")
  - [Полное ТЗ](https://solid-llama-3ab.notion.site/CHALLENGE-1-MARATHON-6-5dedfa7163da410b92b2aec628692baa)
  - [Доска в Trello](https://trello.com/b/8vojUyeX/кто-хочет-стать-миллионером)
  - [Звуки из телепередачи](https://allsoundsaround.com/zvuki-iz-teleperedachi-kto-hochet-stat-millionerom/)
