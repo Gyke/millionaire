@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-eq-XeY">
                                 <rect key="frame" x="94.5" y="762" width="225" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="5fp-L7-Sw0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="5fp-L7-Sw0"/>
                                     <constraint firstAttribute="height" constant="50" id="NVW-Q4-mm5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -53,7 +53,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-1N-qeQ">
                                 <rect key="frame" x="94.5" y="682" width="225" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="7ZI-87-2fs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="7ZI-87-2fs"/>
                                     <constraint firstAttribute="height" constant="50" id="Dm5-Up-GHH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="ZSl-Zf-QLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LpQ-AP-fVD"/>
                             <constraint firstItem="hV8-fv-EUb" firstAttribute="top" secondItem="82N-qL-0en" secondAttribute="bottom" constant="9" id="RTr-Zo-sQ9"/>
                             <constraint firstItem="Oww-3U-V4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SEf-ND-fh1"/>
-                            <constraint firstItem="hV8-fv-EUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Smt-uu-Jrt"/>
+                            <constraint firstItem="hV8-fv-EUb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Smt-uu-Jrt"/>
                             <constraint firstAttribute="trailing" secondItem="hV8-fv-EUb" secondAttribute="trailing" constant="5" id="VPy-ZR-nfj"/>
                             <constraint firstAttribute="bottom" secondItem="Oww-3U-V4X" secondAttribute="bottom" id="Xbt-eF-nUa"/>
                             <constraint firstItem="zmJ-eq-XeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bln-Mn-aa7"/>
