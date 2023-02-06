@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,9 +15,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rulesButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToRules", sender: self)
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToGame", sender: self)
     }
 }
 
