@@ -14,6 +14,7 @@
 		2F911FF929902890002978CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F911FF829902890002978CE /* Assets.xcassets */; };
 		2F911FFC29902890002978CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F911FFA29902890002978CE /* LaunchScreen.storyboard */; };
 		2F912007299028E6002978CE /* Millionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F912006299028E6002978CE /* Millionaire.swift */; };
+		583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583F1CAF29910D54004A4D37 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2F911FFB29902890002978CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F911FFD29902890002978CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F912006299028E6002978CE /* Millionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Millionaire.swift; sourceTree = "<group>"; };
+		583F1CAF29910D54004A4D37 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2F911FF32990288F002978CE /* ViewController.swift */,
+				583F1CAF29910D54004A4D37 /* RulesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */,
 				2F911FF42990288F002978CE /* ViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
