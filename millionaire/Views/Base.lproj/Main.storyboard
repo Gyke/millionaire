@@ -107,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hgx-Jq-ubf" userLabel="top Stack View">
-                                <rect key="frame" x="20" y="48" width="374" height="559"/>
+                                <rect key="frame" x="20" y="48" width="374" height="655"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-BQ-Dg5" userLabel="Logo + Question stack">
                                         <rect key="frame" x="11" y="0.0" width="352" height="87"/>
@@ -128,7 +128,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-f1-chO" userLabel="question number + timer + score Stack">
-                                        <rect key="frame" x="0.0" y="222" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="226" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Question: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFC-JA-ljD" userLabel="question number">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
@@ -151,7 +151,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="JA6-6L-7Nk" userLabel="Buttons stack">
-                                        <rect key="frame" x="27" y="302" width="320" height="257"/>
+                                        <rect key="frame" x="27" y="310" width="320" height="257"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfo-bo-Gqy" userLabel="Button 1 view">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -319,10 +319,19 @@
                                             </view>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-af-g1R" userLabel="take prize">
+                                        <rect key="frame" x="100" y="617" width="174" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Забрать приз" backgroundImage="Rectangle purple"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XRw-af-g1R" secondAttribute="trailing" constant="100" id="4AI-Fz-KKk"/>
                                     <constraint firstAttribute="trailing" secondItem="Ub2-f1-chO" secondAttribute="trailing" id="WkA-DG-Hot"/>
                                     <constraint firstItem="Ub2-f1-chO" firstAttribute="leading" secondItem="hgx-Jq-ubf" secondAttribute="leading" id="k0a-QY-Irf"/>
+                                    <constraint firstItem="XRw-af-g1R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hgx-Jq-ubf" secondAttribute="leading" constant="100" id="xYO-1o-wnB"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LGO-vl-8XF" userLabel="bottom Stack View">
