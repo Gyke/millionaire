@@ -156,7 +156,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfo-bo-Gqy" userLabel="Button 1 view">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNW-1A-xYV">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNW-1A-xYV">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="320" id="IFg-GK-Z5g"/>
@@ -164,6 +164,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="questionBackground"/>
+                                                        <connections>
+                                                            <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="YsX-1R-kSj"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-hc-pm8">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
@@ -197,7 +200,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7a-NO-Lcu" userLabel="Button 2 view">
                                                 <rect key="frame" x="0.0" y="69" width="320" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-8z-HgM">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-8z-HgM">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="A54-gm-fU3"/>
@@ -205,6 +208,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="questionBackground"/>
+                                                        <connections>
+                                                            <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="Mch-oV-vDy"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="Vp5-Wf-Vzb">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
@@ -238,7 +244,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UX-le-Osu" userLabel="Button 3 view">
                                                 <rect key="frame" x="0.0" y="138" width="320" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGv-mJ-oX5">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGv-mJ-oX5">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="320" id="6d2-b6-ayO"/>
@@ -246,6 +252,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="questionBackground"/>
+                                                        <connections>
+                                                            <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="p1G-6s-sJG"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-tT-fJb">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
@@ -279,7 +288,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGc-DX-7V7" userLabel="Button 4 view">
                                                 <rect key="frame" x="0.0" y="207" width="320" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-vS-iYs">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-vS-iYs">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="320" id="dJU-Ty-MoN"/>
@@ -287,6 +296,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="questionBackground"/>
+                                                        <connections>
+                                                            <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="3tn-7X-6gz"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-A4-Thz">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
@@ -440,6 +452,13 @@
                             <constraint firstItem="0AF-Bg-rdZ" firstAttribute="leading" secondItem="2KI-CY-J1k" secondAttribute="leading" id="zFg-5J-6Zb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerFour" destination="Ptj-nU-yfp" id="X5e-k1-fbh"/>
+                        <outlet property="answerOne" destination="sSy-Bs-5jD" id="qfn-lN-b11"/>
+                        <outlet property="answerThree" destination="YD2-Dp-f3k" id="cMJ-JS-K19"/>
+                        <outlet property="answerTwo" destination="epP-Zy-ZnN" id="aM0-Kz-HOT"/>
+                        <outlet property="questionLabel" destination="56w-CK-oC4" id="uT3-jO-rgw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHS-iG-2Re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1142,7 +1161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRN-aa-dUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="278"/>
+            <point key="canvasLocation" x="1597" y="7"/>
         </scene>
     </scenes>
     <resources>

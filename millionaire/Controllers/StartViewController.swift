@@ -19,7 +19,16 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        
         self.performSegue(withIdentifier: "goToGame", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame" {
+            let view = segue.destination as! GameViewController
+            let millionaire = Millionaire(view: view, numberOfQuestion: 1)
+            view.millionaire = millionaire
+        }
     }
 }
 
