@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var winAmountLabel: UILabel!
+    @IBAction func playAgainButton(_ sender: UIButton) {
+        
+    }
+    
 }
 
