@@ -8,12 +8,14 @@
 import UIKit
 
 class RulesViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var rulesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         rulesLabel.text = rules
     }
     

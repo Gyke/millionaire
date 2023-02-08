@@ -27,5 +27,10 @@ class AudioPlayer {
         //Пройгрываем медиа файл
         player?.play()
     }
+    
+    //метод для остановки проигрывания аудио файла
+    func stop() {
+           player?.stop()
+       }
 }
 
