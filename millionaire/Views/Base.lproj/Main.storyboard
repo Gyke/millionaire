@@ -340,7 +340,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LGO-vl-8XF" userLabel="bottom Stack View">
                                 <rect key="frame" x="20" y="771" width="374" height="81"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq7-Ms-WiP" userLabel="50:50">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq7-Ms-WiP" userLabel="50:50">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="81" id="Kuv-jk-AYE"/>
@@ -348,8 +348,11 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="50:50"/>
+                                        <connections>
+                                            <action selector="hintButtonTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="bRi-AK-t4R"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-At-3y9" userLabel="help">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-At-3y9" userLabel="help">
                                         <rect key="frame" x="134.5" y="0.0" width="105" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="81" id="9xO-IX-Oqa"/>
@@ -357,8 +360,11 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="help"/>
+                                        <connections>
+                                            <action selector="hintButtonTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="AEY-9k-vDG"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05n-aq-DHn" userLabel="call">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05n-aq-DHn" userLabel="call">
                                         <rect key="frame" x="269" y="0.0" width="105" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="105" id="B73-sX-FJ0"/>
@@ -366,6 +372,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="call"/>
+                                        <connections>
+                                            <action selector="hintButtonTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="rTE-AG-gph"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -462,6 +471,12 @@
                         <outlet property="answerThreeButton" destination="xGv-mJ-oX5" id="mDf-Ty-zGN"/>
                         <outlet property="answerTwo" destination="epP-Zy-ZnN" id="aM0-Kz-HOT"/>
                         <outlet property="answerTwoButton" destination="bqp-8z-HgM" id="gUq-Ey-yaI"/>
+                        <outlet property="fiftyButton" destination="tq7-Ms-WiP" id="y6r-7f-9Dx"/>
+                        <outlet property="fiftyCloseView" destination="vrq-uG-eGZ" id="rkV-cZ-neF"/>
+                        <outlet property="friendButton" destination="05n-aq-DHn" id="8Zj-i3-bHA"/>
+                        <outlet property="friendCloseView" destination="cg1-hh-6ac" id="8AJ-9h-Xz0"/>
+                        <outlet property="hallButton" destination="Djj-At-3y9" id="y0u-6U-MfH"/>
+                        <outlet property="hallCloseView" destination="Rsm-6a-uJg" id="k9b-EH-Wx6"/>
                         <outlet property="questionLabel" destination="56w-CK-oC4" id="uT3-jO-rgw"/>
                         <outlet property="questionMoneyLabel" destination="MSR-lM-rOK" id="SdA-4F-cAI"/>
                         <outlet property="questionNumberLabel" destination="TFC-JA-ljD" id="2fl-rR-jLF"/>
@@ -1193,7 +1208,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mqV-9W-Wl0"/>
         <segue reference="ZT9-cp-LXM"/>
     </inferredMetricsTieBreakers>
     <resources>
