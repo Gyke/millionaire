@@ -18,6 +18,8 @@
 		5160CCFE29916A120070115E /* QuizMillionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160CCFD29916A120070115E /* QuizMillionaire.swift */; };
 		583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583F1CAF29910D54004A4D37 /* RulesViewController.swift */; };
 		5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888ADD029915B2A002C00BE /* GameViewController.swift */; };
+		A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC84299384DA004F514C /* ScoreTableViewController.swift */; };
+		A54FDC87299408A1004F514C /* ButtonsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC86299408A1004F514C /* ButtonsColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5160CCFD29916A120070115E /* QuizMillionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMillionaire.swift; sourceTree = "<group>"; };
 		583F1CAF29910D54004A4D37 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		5888ADD029915B2A002C00BE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A54FDC84299384DA004F514C /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
+		A54FDC86299408A1004F514C /* ButtonsColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				2F912006299028E6002978CE /* Millionaire.swift */,
 				5160CCFB299169DC0070115E /* Question.swift */,
 				5160CCFD29916A120070115E /* QuizMillionaire.swift */,
+				A54FDC86299408A1004F514C /* ButtonsColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 				2F911FF32990288F002978CE /* StartViewController.swift */,
 				583F1CAF29910D54004A4D37 /* RulesViewController.swift */,
 				5888ADD029915B2A002C00BE /* GameViewController.swift */,
+				A54FDC84299384DA004F514C /* ScoreTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,13 +184,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5160CCFC299169DC0070115E /* Question.swift in Sources */,
-				2F911FF42990288F002978CE /* ViewController.swift in Sources */,
+				A54FDC87299408A1004F514C /* ButtonsColor.swift in Sources */,
+				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				5160CCFE29916A120070115E /* QuizMillionaire.swift in Sources */,
 				583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */,
 				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
 				5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */,
+				A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */,
 				2F911FF22990288F002978CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

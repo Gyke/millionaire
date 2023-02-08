@@ -168,11 +168,11 @@
                                                             <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="YsX-1R-kSj"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-hc-pm8">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-hc-pm8">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k3-Xn-w8N">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -212,11 +212,11 @@
                                                             <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="Mch-oV-vDy"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="Vp5-Wf-Vzb">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vp5-Wf-Vzb">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="B:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-B9-dlS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -256,11 +256,11 @@
                                                             <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="p1G-6s-sJG"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-tT-fJb">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-tT-fJb">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="C:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-TQ-gKt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -300,11 +300,11 @@
                                                             <action selector="answerTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="3tn-7X-6gz"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-A4-Thz">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jX6-A4-Thz">
                                                         <rect key="frame" x="15" y="0.0" width="290" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="D:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQi-Yb-L3B">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -452,12 +452,20 @@
                             <constraint firstItem="0AF-Bg-rdZ" firstAttribute="leading" secondItem="2KI-CY-J1k" secondAttribute="leading" id="zFg-5J-6Zb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9yf-Dv-6bm"/>
                     <connections>
                         <outlet property="answerFour" destination="Ptj-nU-yfp" id="X5e-k1-fbh"/>
+                        <outlet property="answerFourButton" destination="YC8-vS-iYs" id="hSe-bj-gc3"/>
                         <outlet property="answerOne" destination="sSy-Bs-5jD" id="qfn-lN-b11"/>
+                        <outlet property="answerOneButton" destination="hNW-1A-xYV" id="I9L-GO-B9K"/>
                         <outlet property="answerThree" destination="YD2-Dp-f3k" id="cMJ-JS-K19"/>
+                        <outlet property="answerThreeButton" destination="xGv-mJ-oX5" id="mDf-Ty-zGN"/>
                         <outlet property="answerTwo" destination="epP-Zy-ZnN" id="aM0-Kz-HOT"/>
+                        <outlet property="answerTwoButton" destination="bqp-8z-HgM" id="gUq-Ey-yaI"/>
                         <outlet property="questionLabel" destination="56w-CK-oC4" id="uT3-jO-rgw"/>
+                        <outlet property="questionMoneyLabel" destination="MSR-lM-rOK" id="SdA-4F-cAI"/>
+                        <outlet property="questionNumberLabel" destination="TFC-JA-ljD" id="2fl-rR-jLF"/>
+                        <segue destination="8Yg-WX-qvm" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="mqV-9W-Wl0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHS-iG-2Re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -564,10 +572,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="680"/>
         </scene>
-        <!--View Controller-->
+        <!--Score Table View Controller-->
         <scene sceneID="oix-70-KAD">
             <objects>
-                <viewController id="8Yg-WX-qvm" sceneMemberID="viewController">
+                <viewController id="8Yg-WX-qvm" customClass="ScoreTableViewController" customModule="millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgB-jz-EUy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -776,7 +784,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yx-Oz-D9K">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle blue"/>
+                                                <state key="normal" backgroundImage="Rectangle yellow"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="L9X-6V-9A5">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="42"/>
@@ -961,7 +969,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-rL-Hjg">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle blue"/>
+                                                <state key="normal" backgroundImage="Rectangle yellow"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-56-3br">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="41.5"/>
@@ -1109,7 +1117,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMy-xQ-9c8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle green"/>
+                                                <state key="normal" backgroundImage="Rectangle purple"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-rX-C3b">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="41.5"/>
@@ -1158,18 +1166,40 @@
                             <constraint firstItem="gbt-Vt-dXr" firstAttribute="centerX" secondItem="KgB-jz-EUy" secondAttribute="centerX" id="zLL-Wa-611"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KFi-WV-lcL"/>
+                    <connections>
+                        <outlet property="eightQuestionButton" destination="KFN-Gn-5Tv" id="2ZC-nr-irS"/>
+                        <outlet property="elevenQuestionButton" destination="WIV-fK-hSG" id="aZp-7L-SnG"/>
+                        <outlet property="fiveQuestionButton" destination="Im1-rL-Hjg" id="DyY-fO-O6J"/>
+                        <outlet property="fiveteenQuestionButton" destination="1wD-rY-yQk" id="M13-rM-zsn"/>
+                        <outlet property="fourQuestionButton" destination="8Oo-Ek-wKj" id="6Oe-9z-bzD"/>
+                        <outlet property="fourteenQuestionButton" destination="xR0-do-LiP" id="BRI-rF-xN1"/>
+                        <outlet property="nineQuestionButton" destination="Z9j-FK-cFy" id="L0P-I0-mhU"/>
+                        <outlet property="oneQuestionButton" destination="DMy-xQ-9c8" id="Odv-62-qKW"/>
+                        <outlet property="sevenQuestionButton" destination="JzY-fl-EFy" id="JQs-Qs-trF"/>
+                        <outlet property="sixQuestionButton" destination="V6U-AC-DSa" id="ObG-NE-W6v"/>
+                        <outlet property="tenQuestionButton" destination="1Yx-Oz-D9K" id="Tim-DN-Cde"/>
+                        <outlet property="thirteenQuestionButton" destination="F7b-15-vK1" id="n1w-XA-ywm"/>
+                        <outlet property="threeQuestionButton" destination="Kh2-oC-yB4" id="RB1-zx-xnN"/>
+                        <outlet property="twelveQuestionButton" destination="osw-1z-eEY" id="RWg-D5-Fi4"/>
+                        <outlet property="twoQuestionButton" destination="Qfe-Qy-h4a" id="6Zp-my-DMP"/>
+                        <segue destination="Ez5-Gs-jfH" kind="presentation" identifier="returnToGame" modalPresentationStyle="fullScreen" id="ZT9-cp-LXM"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToStart" modalPresentationStyle="fullScreen" id="jXF-OP-Ukq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRN-aa-dUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="7"/>
+            <point key="canvasLocation" x="1793" y="-3"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mqV-9W-Wl0"/>
+        <segue reference="ZT9-cp-LXM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="50:50" width="105" height="81"/>
         <image name="Line 1" width="122.5" height="76"/>
         <image name="Line 2" width="112.5" height="89.5"/>
-        <image name="Rectangle blue" width="320" height="39"/>
-        <image name="Rectangle green" width="320" height="38"/>
         <image name="Rectangle purple" width="320" height="38"/>
         <image name="Rectangle yellow" width="320" height="38"/>
         <image name="background" width="414" height="736"/>
