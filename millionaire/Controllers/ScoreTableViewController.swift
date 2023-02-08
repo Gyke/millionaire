@@ -30,7 +30,7 @@ class ScoreTableViewController: UIViewController {
     @IBOutlet weak var twelveQuestionButton: UIButton!
     @IBOutlet weak var thirteenQuestionButton: UIButton!
     @IBOutlet weak var fourteenQuestionButton: UIButton!
-    @IBOutlet weak var fiveteenQuestionButton: UIButton!
+    @IBOutlet weak var fifteenQuestionButton: UIButton!
 
     
     
@@ -63,7 +63,7 @@ class ScoreTableViewController: UIViewController {
             twelveQuestionButton,
             thirteenQuestionButton,
             fourteenQuestionButton,
-            fiveteenQuestionButton
+            fifteenQuestionButton
         ]
         
         buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)

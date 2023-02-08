@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum GameSuccessType {
+    case answer
+    case hintFifty
+    
+}
+
 protocol MillionaireProtocol: AnyObject {
     func answerTapped(answer: String, numberOfAnswer: Int)
     func hintTapped()

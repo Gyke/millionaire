@@ -372,7 +372,7 @@
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LLs-6o-8iS" userLabel="Cover X Stack View">
                                 <rect key="frame" x="8" y="769" width="398" height="88"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrq-uG-eGZ" userLabel="X 50:50">
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrq-uG-eGZ" userLabel="X 50:50">
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="88"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line 1" translatesAutoresizingMaskIntoConstraints="NO" id="qYR-ge-Onh">
@@ -392,7 +392,7 @@
                                             <constraint firstAttribute="bottom" secondItem="qYR-ge-Onh" secondAttribute="bottom" id="znO-E1-3Vy"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsm-6a-uJg" userLabel="X help">
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsm-6a-uJg" userLabel="X help">
                                         <rect key="frame" x="140" y="0.0" width="118" height="88"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line 1" translatesAutoresizingMaskIntoConstraints="NO" id="qHU-vE-0Fo">
@@ -412,7 +412,7 @@
                                             <constraint firstItem="qHU-vE-0Fo" firstAttribute="top" secondItem="Rsm-6a-uJg" secondAttribute="top" id="ix8-PW-bgQ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg1-hh-6ac" userLabel="X call">
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg1-hh-6ac" userLabel="X call">
                                         <rect key="frame" x="280" y="0.0" width="118" height="88"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line 1" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-Z9-nUz">
@@ -1170,8 +1170,8 @@
                     <connections>
                         <outlet property="eightQuestionButton" destination="KFN-Gn-5Tv" id="2ZC-nr-irS"/>
                         <outlet property="elevenQuestionButton" destination="WIV-fK-hSG" id="aZp-7L-SnG"/>
+                        <outlet property="fifteenQuestionButton" destination="1wD-rY-yQk" id="M13-rM-zsn"/>
                         <outlet property="fiveQuestionButton" destination="Im1-rL-Hjg" id="DyY-fO-O6J"/>
-                        <outlet property="fiveteenQuestionButton" destination="1wD-rY-yQk" id="M13-rM-zsn"/>
                         <outlet property="fourQuestionButton" destination="8Oo-Ek-wKj" id="6Oe-9z-bzD"/>
                         <outlet property="fourteenQuestionButton" destination="xR0-do-LiP" id="BRI-rF-xN1"/>
                         <outlet property="nineQuestionButton" destination="Z9j-FK-cFy" id="L0P-I0-mhU"/>
