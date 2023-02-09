@@ -14,6 +14,7 @@ class ScoreTableViewController: UIViewController {
     var questionNumber: Int?
     var answerResult: Bool?
     var isHint: [Bool]?
+    var money: Int?
    
     //MARK: - IBOutlet
     
@@ -79,7 +80,7 @@ class ScoreTableViewController: UIViewController {
             if result {
                 self.performSegue(withIdentifier: "returnToGame", sender: self)
             } else {
-                self.performSegue(withIdentifier: "goToStart", sender: self)
+                self.performSegue(withIdentifier: "goToFinish", sender: self)
             }
         })
         
@@ -107,6 +108,10 @@ class ScoreTableViewController: UIViewController {
             guard let isHint = isHint else { return }
             let millionaire = Millionaire(view: view, numberOfQuestion: nextNumber + 1, isHintTapped: isHint )
             view.millionaire = millionaire
+        } else if segue.identifier == "goToFinish" {
+            let view = segue.destination as! FinalViewController
+            view.result = "Проигрышь"
+            view.win = money
         }
     }
 

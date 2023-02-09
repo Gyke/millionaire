@@ -8,29 +8,29 @@
 import UIKit
 
 class FinalViewController: UIViewController {
-
     
-    
-    
-    
-    
-    
+    var win: Int?
+    var result: String?
+  
+    @IBOutlet weak var winAmount: UILabel!
+    @IBOutlet weak var resultGameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        winAmount.text = String(win!)
+        resultGameLabel.text = result
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func playAgeinButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToGame", sender: self)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame" {
+            let view = segue.destination as! GameViewController
+            let millionaire = Millionaire(view: view, numberOfQuestion: 1, isHintTapped: [false, false, false])
+            view.millionaire = millionaire
+        }
+    }
 }

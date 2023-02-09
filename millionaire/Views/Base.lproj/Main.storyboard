@@ -690,6 +690,10 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="PLAY AGAIN" backgroundImage="Rectangle 4"/>
+                                <connections>
+                                    <action selector="playAgeinButtonPressed:" destination="2EQ-Zu-6wp" eventType="touchUpInside" id="b8l-en-Dr4"/>
+                                    <segue destination="Ez5-Gs-jfH" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="igJ-we-S7G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="afO-lk-F4P"/>
@@ -708,6 +712,10 @@
                             <constraint firstItem="hlV-bE-jei" firstAttribute="top" secondItem="v0V-m5-SAi" secondAttribute="bottom" constant="40" id="yMN-Bt-eMd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultGameLabel" destination="VDp-74-PGK" id="Wsf-sH-dDF"/>
+                        <outlet property="winAmount" destination="EL5-Cq-Tp0" id="nub-0g-6Ne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVS-ec-xaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1326,6 +1334,7 @@
                         <outlet property="twoQuestionButton" destination="Qfe-Qy-h4a" id="6Zp-my-DMP"/>
                         <segue destination="Ez5-Gs-jfH" kind="presentation" identifier="returnToGame" modalPresentationStyle="fullScreen" id="ZT9-cp-LXM"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToStart" modalPresentationStyle="fullScreen" id="jXF-OP-Ukq"/>
+                        <segue destination="2EQ-Zu-6wp" kind="presentation" identifier="goToFinish" modalPresentationStyle="fullScreen" id="e5B-T3-C6I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRN-aa-dUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

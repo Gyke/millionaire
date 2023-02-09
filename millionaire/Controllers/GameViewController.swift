@@ -190,6 +190,7 @@ extension GameViewController: MillionaireViewProtocol {
             view.questionNumber = millionaire.numberOfQuestion
             view.answerResult = millionaire.answerResult
             view.isHint = millionaire.isHintTapped
+            view.money = money[millionaire.numberOfQuestion - 1]
         }
     }
     
