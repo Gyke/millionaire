@@ -925,7 +925,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yx-Oz-D9K">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle yellow"/>
+                                                <state key="normal" backgroundImage="Rectangle blue"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="L9X-6V-9A5">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="42"/>
@@ -1110,7 +1110,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-rL-Hjg">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle yellow"/>
+                                                <state key="normal" backgroundImage="Rectangle blue"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-56-3br">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="41.5"/>
@@ -1258,7 +1258,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMy-xQ-9c8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle purple"/>
+                                                <state key="normal" backgroundImage="Rectangle green"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-rX-C3b">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="41.5"/>
@@ -1334,13 +1334,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F0u-tT-ObE"/>
+        <segue reference="ZT9-cp-LXM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="50:50" width="105" height="81"/>
         <image name="Line 1" width="122.5" height="76"/>
         <image name="Line 2" width="112.5" height="89.5"/>
         <image name="Rectangle 4" width="300" height="100"/>
+        <image name="Rectangle blue" width="320" height="39"/>
+        <image name="Rectangle green" width="320" height="38"/>
         <image name="Rectangle purple" width="320" height="38"/>
         <image name="Rectangle white" width="261" height="47"/>
         <image name="Rectangle yellow" width="320" height="38"/>
