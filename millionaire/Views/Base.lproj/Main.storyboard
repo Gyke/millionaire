@@ -489,6 +489,7 @@
                         <outlet property="questionLabel" destination="56w-CK-oC4" id="uT3-jO-rgw"/>
                         <outlet property="questionMoneyLabel" destination="MSR-lM-rOK" id="SdA-4F-cAI"/>
                         <outlet property="questionNumberLabel" destination="TFC-JA-ljD" id="2fl-rR-jLF"/>
+                        <outlet property="timerLabel" destination="cci-rY-Umy" id="dkS-zx-u8c"/>
                         <segue destination="8Yg-WX-qvm" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="mqV-9W-Wl0"/>
                     </connections>
                 </viewController>
@@ -1303,6 +1304,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="mqV-9W-Wl0"/>
         <segue reference="ZT9-cp-LXM"/>
     </inferredMetricsTieBreakers>
     <resources>
