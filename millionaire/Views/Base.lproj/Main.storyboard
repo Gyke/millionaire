@@ -337,6 +337,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Забрать приз" backgroundImage="Rectangle purple"/>
+                                        <connections>
+                                            <action selector="getPrizeButtonTapped:" destination="Ez5-Gs-jfH" eventType="touchUpInside" id="aMg-IS-o3J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

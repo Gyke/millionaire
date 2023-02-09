@@ -52,6 +52,8 @@ class GameViewController: UIViewController {
         millionaire.setQuestion()
         
     }
+    //MARK: - ViewDidAppear
+    
     override func viewDidAppear(_ animated: Bool) {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer),userInfo: nil, repeats: true)
     }
@@ -71,6 +73,10 @@ class GameViewController: UIViewController {
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
         }
+        timer.invalidate()
+    }
+    
+    @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
         timer.invalidate()
     }
     
