@@ -32,5 +32,13 @@ class StartViewController: UIViewController {
         
         self.performSegue(withIdentifier: "goToGame", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame" {
+            let view = segue.destination as! GameViewController
+            let millionaire = Millionaire(view: view, numberOfQuestion: 1, isHintTapped: [false, false, false])
+            view.millionaire = millionaire
+        }
+    }
 }
 
