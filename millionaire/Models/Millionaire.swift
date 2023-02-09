@@ -96,7 +96,13 @@ class Millionaire: MillionaireProtocol {
                     }
                 case 3:
                     let res = hint.filter{ $0 > 0 }
-                    if i == trueIndex { hint[i] = 50 } else { if res.count == 1 { hint[i] = 50 } else if res.count == 2 { hint[i] = 0 } }
+                    if i == trueIndex {
+                        hint[i] = 50
+                        let res = hint.filter{ $0 > 0 }
+                        if res.count == 3 {
+                            hint[Int.random(in: 0...2)] = 0
+                        }
+                    } else { if res.count == 1 { hint[i] = 50 } else if res.count == 2 { hint[i] = 0 } }
                 default:
                     break
                 }
