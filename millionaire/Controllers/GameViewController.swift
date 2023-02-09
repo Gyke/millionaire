@@ -10,6 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerOne: UILabel!
     @IBOutlet weak var answerTwo: UILabel!
@@ -24,10 +26,21 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionMoneyLabel: UILabel!
     
+    @IBOutlet weak var fiftyCloseView: UIView!
+    @IBOutlet weak var hallCloseView: UIView!
+    @IBOutlet weak var friendCloseView: UIView!
+    
+    @IBOutlet weak var fiftyButton: UIButton!
+    @IBOutlet weak var hallButton: UIButton!
+    @IBOutlet weak var friendButton: UIButton!
+    
+    //MARK: - Variables
+    
     var millionaire: MillionaireProtocol!
     
     let money: [Int] = [100, 200, 300, 400, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000]
     
+    //MARK: - ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +48,8 @@ class GameViewController: UIViewController {
         millionaire.setQuestion()
         
     }
+    
+    //MARK: - IBActions
     
     @IBAction func answerTapped(_ sender: UIButton) {
         for tag in 1...4 {
@@ -50,8 +65,32 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func hintButtonTapped(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            fiftyCloseView.alpha = 1
+            fiftyButton.isUserInteractionEnabled = false
+            let percentage = millionaire.hintTapped(hintType: .hintFifty)
+            if percentage[0] == 0 { answerOneButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[1] == 0 { answerTwoButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[2] == 0 { answerThreeButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[3] == 0 { answerFourButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            
+        case 2:
+            return
+        case 3:
+            return
+        default:
+            return
+        }
+    }
+    
+    //MARK: - Methods
 
 }
+
+//MARK: - Extensions
 
 extension GameViewController: MillionaireViewProtocol {
    
@@ -63,19 +102,49 @@ extension GameViewController: MillionaireViewProtocol {
         answerFour.text = question.answerOptions[3]
         questionNumberLabel.text = "Question: \(millionaire.numberOfQuestion)"
         questionMoneyLabel.text = "\(money[millionaire.numberOfQuestion - 1]) RUB"
+        if millionaire.isHintTapped[0] == true {
+            fiftyCloseView.alpha = 1
+            fiftyButton.isUserInteractionEnabled = false
+        }
+        if millionaire.isHintTapped[1] == true {
+            hallCloseView.alpha = 1
+            hallButton.isUserInteractionEnabled = false
+        }
+        if millionaire.isHintTapped[2] == true {
+            friendCloseView.alpha = 1
+            friendButton.isUserInteractionEnabled = false
+        }
+            
     }
     
-    func success(numberOfQuestion: Int, numberOfAnswer: Int) {
+    //MARK: - View - Success
+    
+    func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int) {
         
-        //проигрываем музыку правильного ответа
+        switch successType {
+        case .answer:
+            //проигрываем музыку правильного ответа
+            
+            //изменение цвета кнопки
+            setButtonBackground(answerNumber: numberOfAnswer, colour: .green)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            })
+        case .hintFifty:
+            fiftyCloseView.alpha = 1.0
+            fiftyCloseView.isUserInteractionEnabled = false
+            fiftyButton.isUserInteractionEnabled = false
+        case .hallAssistance:
+            return
+        case .callToFriends:
+            return
+        }
         
-        setButtonBackground(answerNumber: numberOfAnswer, colour: .green)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-            self.performSegue(withIdentifier: "goToResult", sender: self)
-        })
         
     }
+    
+    //MARK: - View - Failure
     
     func failure(numberOfQuestion: Int, numberOfAnswer: Int) {
         
@@ -92,6 +161,8 @@ extension GameViewController: MillionaireViewProtocol {
         })
         
     }
+    
+    //MARK: - Extension Methods
     
     func setButtonBackground(answerNumber: Int, colour: ButtonColor) {
         switch answerNumber {
@@ -113,6 +184,7 @@ extension GameViewController: MillionaireViewProtocol {
             let view = segue.destination as! ScoreTableViewController
             view.questionNumber = millionaire.numberOfQuestion
             view.answerResult = millionaire.answerResult
+            view.isHint = millionaire.isHintTapped
         }
     }
     
