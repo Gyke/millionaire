@@ -8,13 +8,23 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
     @IBAction func rulesButtonPressed(_ sender: UIButton) {
+        
+        
+        
         self.performSegue(withIdentifier: "goToRules", sender: self)
     }
     
