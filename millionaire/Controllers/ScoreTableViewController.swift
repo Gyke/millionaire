@@ -75,7 +75,7 @@ class ScoreTableViewController: UIViewController {
     
     func goToNextScreeWithDelay(result: Bool) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
         
             if result {
                 self.performSegue(withIdentifier: "returnToGame", sender: self)
@@ -110,7 +110,7 @@ class ScoreTableViewController: UIViewController {
             view.millionaire = millionaire
         } else if segue.identifier == "goToFinish" {
             let view = segue.destination as! FinalViewController
-            view.result = "Проигрышь"
+            view.result = "Проигрыш"
             view.win = money
         }
     }

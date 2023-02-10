@@ -14,6 +14,7 @@
 		2F911FF929902890002978CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F911FF829902890002978CE /* Assets.xcassets */; };
 		2F911FFC29902890002978CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F911FFA29902890002978CE /* LaunchScreen.storyboard */; };
 		2F912007299028E6002978CE /* Millionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F912006299028E6002978CE /* Millionaire.swift */; };
+		5121E0072996BFB90099BB28 /* zvuk-rules.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5121E0062996BFB90099BB28 /* zvuk-rules.mp3 */; };
 		5160CCFC299169DC0070115E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160CCFB299169DC0070115E /* Question.swift */; };
 		5160CCFE29916A120070115E /* QuizMillionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160CCFD29916A120070115E /* QuizMillionaire.swift */; };
 		5189F2602992C2130091C636 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189F25F2992C2130091C636 /* AudioPlayer.swift */; };
@@ -43,6 +44,7 @@
 		2F911FFB29902890002978CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F911FFD29902890002978CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F912006299028E6002978CE /* Millionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Millionaire.swift; sourceTree = "<group>"; };
+		5121E0062996BFB90099BB28 /* zvuk-rules.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zvuk-rules.mp3"; sourceTree = "<group>"; };
 		5160CCFB299169DC0070115E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5160CCFD29916A120070115E /* QuizMillionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMillionaire.swift; sourceTree = "<group>"; };
 		5189F25F2992C2130091C636 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				51CF03872993F555006DF7C0 /* correctAnswer.mp3 */,
 				51CF038B2993F555006DF7C0 /* endOfGame.mp3 */,
 				51CF03882993F555006DF7C0 /* musical_intro.mp3 */,
+				5121E0062996BFB90099BB28 /* zvuk-rules.mp3 */,
 				51CF03852993F555006DF7C0 /* nextQuestion.mp3 */,
 				51CF03892993F555006DF7C0 /* reflectionTime.mp3 */,
 				51CF03862993F555006DF7C0 /* time_is_Up.mp3 */,
@@ -215,6 +218,7 @@
 				2F911FFC29902890002978CE /* LaunchScreen.storyboard in Resources */,
 				51CF038D2993F555006DF7C0 /* nextQuestion.mp3 in Resources */,
 				51CF038E2993F555006DF7C0 /* time_is_Up.mp3 in Resources */,
+				5121E0072996BFB90099BB28 /* zvuk-rules.mp3 in Resources */,
 				51CF03932993F555006DF7C0 /* endOfGame.mp3 in Resources */,
 				51CF03922993F555006DF7C0 /* wrongAnswer.mp3 in Resources */,
 				2F911FF929902890002978CE /* Assets.xcassets in Resources */,

@@ -9,6 +9,8 @@ import UIKit
 
 class FinalViewController: UIViewController {
     
+    let musicEnd = AudioPlayer()
+    
     var win: Int?
     var result: String?
   
@@ -20,6 +22,10 @@ class FinalViewController: UIViewController {
         winAmount.text = String(win!)
         resultGameLabel.text = result
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        musicEnd.play(sound: "endOfGame")
     }
     
     @IBAction func playAgeinButtonPressed(_ sender: UIButton) {
