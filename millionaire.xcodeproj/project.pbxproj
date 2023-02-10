@@ -233,13 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5160CCFC299169DC0070115E /* Question.swift in Sources */,
-				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				A54FDC87299408A1004F514C /* ButtonsColor.swift in Sources */,
 				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				5731725A299441A600C38F4C /* RegisterViewController.swift in Sources */,
 				5160CCFE29916A120070115E /* QuizMillionaire.swift in Sources */,
 				583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */,
-				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
 				5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */,
