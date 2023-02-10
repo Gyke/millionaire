@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
 
     //MARK: - IBOutlets
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerOne: UILabel!
     @IBOutlet weak var answerTwo: UILabel!
@@ -41,6 +42,10 @@ class GameViewController: UIViewController {
     
     //MARK: - Variables
     
+    
+    var timer = Timer()
+    var totalTime = 30
+    
     var millionaire: MillionaireProtocol!
     
     let money: [Int] = [100, 200, 300, 400, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000]
@@ -49,9 +54,13 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         millionaire.setQuestion()
         
+    }
+    //MARK: - ViewDidAppear
+    
+    override func viewDidAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer),userInfo: nil, repeats: true)
     }
     
     //MARK: - IBActions
@@ -69,6 +78,11 @@ class GameViewController: UIViewController {
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
         }
+        timer.invalidate()
+    }
+    
+    @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
+        timer.invalidate()
     }
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
@@ -92,6 +106,19 @@ class GameViewController: UIViewController {
     }
     
     //MARK: - Methods
+
+    @objc func updateTimer() {
+        if totalTime != 0 {
+            totalTime -= 1
+            timerLabel.text = String(totalTime)
+            if totalTime <= 5 {
+                timerLabel.textColor = .red
+            }
+        } else {
+            timer.invalidate()
+        }
+        
+    }
 
 }
 
