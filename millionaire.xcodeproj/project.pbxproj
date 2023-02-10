@@ -26,6 +26,7 @@
 		51CF03922993F555006DF7C0 /* wrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51CF038A2993F555006DF7C0 /* wrongAnswer.mp3 */; };
 		51CF03932993F555006DF7C0 /* endOfGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51CF038B2993F555006DF7C0 /* endOfGame.mp3 */; };
 		5731725A299441A600C38F4C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57317259299441A600C38F4C /* RegisterViewController.swift */; };
+		5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731726229955C3D00C38F4C /* FinalViewController.swift */; };
 		583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583F1CAF29910D54004A4D37 /* RulesViewController.swift */; };
 		5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888ADD029915B2A002C00BE /* GameViewController.swift */; };
 		A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC84299384DA004F514C /* ScoreTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		51CF038A2993F555006DF7C0 /* wrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongAnswer.mp3; sourceTree = "<group>"; };
 		51CF038B2993F555006DF7C0 /* endOfGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endOfGame.mp3; sourceTree = "<group>"; };
 		57317259299441A600C38F4C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5731726229955C3D00C38F4C /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		583F1CAF29910D54004A4D37 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		5888ADD029915B2A002C00BE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A54FDC84299384DA004F514C /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				5189F25F2992C2130091C636 /* AudioPlayer.swift */,
 				A54FDC84299384DA004F514C /* ScoreTableViewController.swift */,
 				57317259299441A600C38F4C /* RegisterViewController.swift */,
+				5731726229955C3D00C38F4C /* FinalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
+				5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */,
 				5189F2602992C2130091C636 /* AudioPlayer.swift in Sources */,
 				5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */,
 				A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */,
