@@ -68,6 +68,8 @@ class GameViewController: UIViewController {
     
     @IBAction func answerTapped(_ sender: UIButton) {
         
+        //Музака напряженная перед ответом
+        musicGame.play(sound: "zvuk-napryajeniya-pered-otv")
         
         for tag in 1...4 {
             if sender.tag == tag {
@@ -171,6 +173,7 @@ extension GameViewController: MillionaireViewProtocol {
             //проигрываем музыку правильного ответа
             musicGame.stop()
             musicGame.play(sound: "correctAnswer")
+            
             //изменение цвета кнопки
             setButtonBackground(answerNumber: numberOfAnswer, colour: .green)
             
@@ -197,6 +200,7 @@ extension GameViewController: MillionaireViewProtocol {
         //проигрываем музыку в случае неудачи
         musicGame.stop()
         musicGame.play(sound: "wrongAnswer")
+            
         
         setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
         
@@ -204,7 +208,7 @@ extension GameViewController: MillionaireViewProtocol {
             setButtonBackground(answerNumber: index + 1, colour: .green)
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             self.performSegue(withIdentifier: "goToResult", sender: self)
         })
         
