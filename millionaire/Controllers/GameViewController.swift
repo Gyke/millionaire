@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     
 
     let musicGame = AudioPlayer()
-    
+    var count = 0
 
     //MARK: - IBOutlets
     
@@ -85,17 +85,21 @@ class GameViewController: UIViewController {
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
-                
-                //Деактивизация кнопок подсказок
-                fiftyButton.isEnabled = false
-                hallButton.isEnabled = false
-                friendButton.isEnabled = false
-                getPrizeButton.isEnabled = false
-                //Деактивизация кнопок вариантов ответов
-                answerOneButton.isUserInteractionEnabled = false
-                answerTwoButton.isUserInteractionEnabled = false
-                answerThreeButton.isUserInteractionEnabled = false
-                answerFourButton.isUserInteractionEnabled = false
+                count += 1
+                if count == 2 {
+                    //Деактивизация кнопок подсказок
+                    fiftyButton.isEnabled = false
+                    hallButton.isEnabled = false
+                    friendButton.isEnabled = false
+                    getPrizeButton.isEnabled = false
+                    
+                    //Деактивизация кнопок вариантов ответов
+                    answerOneButton.isUserInteractionEnabled = false
+                    answerTwoButton.isUserInteractionEnabled = false
+                    answerThreeButton.isUserInteractionEnabled = false
+                    answerFourButton.isUserInteractionEnabled = false
+                    
+                }
                 
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
@@ -243,21 +247,25 @@ extension GameViewController: MillionaireViewProtocol {
     //MARK: - View - Failure
     
     func failure(numberOfQuestion: Int, numberOfAnswer: Int) {
-        
         //проигрываем музыку в случае неудачи
         musicGame.stop()
         musicGame.play(sound: "wrongAnswer")
             
         
-        setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
+        setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
         
-        if let index = millionaire.question.answerOptions.firstIndex(where: {$0 == millionaire.question.answer}) {
-            setButtonBackground(answerNumber: index + 1, colour: .green)
+        
+        if count == 2 {
+            setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
+            
+            if let index = millionaire.question.answerOptions.firstIndex(where: {$0 == millionaire.question.answer}) {
+                setButtonBackground(answerNumber: index + 1, colour: .green)
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            })
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-            self.performSegue(withIdentifier: "goToResult", sender: self)
-        })
         
     }
     
