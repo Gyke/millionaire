@@ -135,7 +135,7 @@ extension GameViewController: MillionaireViewProtocol {
         answerTwo.text = question.answerOptions[1]
         answerThree.text = question.answerOptions[2]
         answerFour.text = question.answerOptions[3]
-        questionNumberLabel.text = "Question: \(millionaire.numberOfQuestion)"
+        questionNumberLabel.text = "Вопрос: \(millionaire.numberOfQuestion)"
         questionMoneyLabel.text = "\(money[millionaire.numberOfQuestion - 1]) RUB"
         if millionaire.isHintTapped[0] == true {
             fiftyCloseView.alpha = 1

@@ -32,11 +32,19 @@ class FinalViewController: UIViewController {
         self.performSegue(withIdentifier: "goToGame", sender: self)
     }
     
+    
+    @IBAction func backToMainButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToMain", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGame" {
             let view = segue.destination as! GameViewController
             let millionaire = Millionaire(view: view, numberOfQuestion: 1, isHintTapped: [false, false, false])
             view.millionaire = millionaire
+        } else if segue.identifier == "goToMain" {
+//            let view = segue.destination as! StartViewController
+//            TODO: Пофиксить воспроизведение музыки
         }
     }
 }

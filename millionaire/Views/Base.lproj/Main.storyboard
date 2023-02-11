@@ -27,20 +27,20 @@
                                     <constraint firstAttribute="height" constant="200" id="vXK-66-Nev"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82N-qL-0en">
-                                <rect key="frame" x="156.5" y="325" width="101" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в игру" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82N-qL-0en">
+                                <rect key="frame" x="61.5" y="325" width="291" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Who Wants to be a Millionare" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-fv-EUb">
-                                <rect key="frame" x="5" y="364" width="404" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кто хочет стать миллионером" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-fv-EUb">
+                                <rect key="frame" x="5" y="375" width="404" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-eq-XeY">
-                                <rect key="frame" x="94.5" y="772" width="225" height="50"/>
+                                <rect key="frame" x="94.5" y="752" width="225" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="5fp-L7-Sw0"/>
                                     <constraint firstAttribute="height" constant="50" id="NVW-Q4-mm5"/>
@@ -48,14 +48,14 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Start Game"/>
+                                <state key="normal" title="Начать игру"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bth-wg-lnf"/>
                                     <segue destination="Ez5-Gs-jfH" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="F0u-tT-ObE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-1N-qeQ">
-                                <rect key="frame" x="94.5" y="702" width="225" height="50"/>
+                                <rect key="frame" x="94.5" y="677" width="225" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="7ZI-87-2fs"/>
                                     <constraint firstAttribute="height" constant="50" id="Dm5-Up-GHH"/>
@@ -63,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Rules"/>
+                                <state key="normal" title="Правила игры"/>
                                 <connections>
                                     <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhB-ID-99d"/>
                                     <segue destination="zyX-Xo-3v0" kind="presentation" identifier="goToRules" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ksG-VH-OxX"/>
@@ -74,10 +74,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oww-3U-V4X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="6J8-7u-yIn"/>
-                            <constraint firstItem="zmJ-eq-XeY" firstAttribute="top" secondItem="6w1-1N-qeQ" secondAttribute="bottom" constant="20" id="AuN-gf-cCc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zmJ-eq-XeY" secondAttribute="bottom" constant="40" id="BHp-eT-dhx"/>
+                            <constraint firstItem="zmJ-eq-XeY" firstAttribute="top" secondItem="6w1-1N-qeQ" secondAttribute="bottom" constant="25" id="AuN-gf-cCc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zmJ-eq-XeY" secondAttribute="bottom" constant="60" id="BHp-eT-dhx"/>
                             <constraint firstItem="82N-qL-0en" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Faj-eE-VbR"/>
-                            <constraint firstItem="hV8-fv-EUb" firstAttribute="top" secondItem="82N-qL-0en" secondAttribute="bottom" constant="9" id="HKg-qa-qib"/>
+                            <constraint firstItem="hV8-fv-EUb" firstAttribute="top" secondItem="82N-qL-0en" secondAttribute="bottom" constant="20" id="HKg-qa-qib"/>
                             <constraint firstItem="ZSl-Zf-QLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LpQ-AP-fVD"/>
                             <constraint firstItem="Oww-3U-V4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SEf-ND-fh1"/>
                             <constraint firstAttribute="trailing" secondItem="hV8-fv-EUb" secondAttribute="trailing" constant="5" id="VPy-ZR-nfj"/>
@@ -90,6 +90,7 @@
                             <constraint firstItem="Oww-3U-V4X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zf3-wh-7eX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AnK-vJ-GMN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -684,16 +685,32 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-YK-VNc">
+                                <rect key="frame" x="94.5" y="632" width="225" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Hx-if-yb5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="fal-Zn-hXA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="На главную"/>
+                                <connections>
+                                    <action selector="backToMainButtonPressed:" destination="2EQ-Zu-6wp" eventType="touchUpInside" id="1Kt-ay-d7o"/>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBU-uQ-fF4"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToMain" modalPresentationStyle="fullScreen" id="wY7-aJ-IAG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b14-i6-ZhN">
-                                <rect key="frame" x="82" y="722" width="250" height="70"/>
+                                <rect key="frame" x="57" y="732" width="300" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eq0-VE-RHM"/>
-                                    <constraint firstAttribute="width" constant="250" id="qWQ-nc-P7L"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="qWQ-nc-P7L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="PLAY AGAIN" backgroundImage="Rectangle 4"/>
+                                <state key="normal" title="ИГРАТЬ СНОВА" backgroundImage="Rectangle 4"/>
                                 <connections>
                                     <action selector="playAgeinButtonPressed:" destination="2EQ-Zu-6wp" eventType="touchUpInside" id="b8l-en-Dr4"/>
                                     <segue destination="Ez5-Gs-jfH" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="igJ-we-S7G"/>
@@ -704,10 +721,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v0V-m5-SAi" firstAttribute="centerX" secondItem="kjQ-WJ-Hjd" secondAttribute="centerX" id="8xM-KJ-EeH"/>
-                            <constraint firstItem="afO-lk-F4P" firstAttribute="bottom" secondItem="b14-i6-ZhN" secondAttribute="bottom" constant="70" id="CT8-Sg-L0y"/>
+                            <constraint firstItem="afO-lk-F4P" firstAttribute="bottom" secondItem="b14-i6-ZhN" secondAttribute="bottom" constant="60" id="CT8-Sg-L0y"/>
                             <constraint firstItem="2dl-FD-JSn" firstAttribute="top" secondItem="kjQ-WJ-Hjd" secondAttribute="top" id="Cv4-ax-DMo"/>
                             <constraint firstAttribute="bottom" secondItem="2dl-FD-JSn" secondAttribute="bottom" id="H63-Xk-jRq"/>
                             <constraint firstItem="2dl-FD-JSn" firstAttribute="trailing" secondItem="afO-lk-F4P" secondAttribute="trailing" id="PQi-D8-NWU"/>
+                            <constraint firstItem="b14-i6-ZhN" firstAttribute="top" secondItem="dfP-YK-VNc" secondAttribute="bottom" constant="50" id="QOm-qT-OcJ"/>
+                            <constraint firstItem="dfP-YK-VNc" firstAttribute="centerX" secondItem="kjQ-WJ-Hjd" secondAttribute="centerX" id="S1T-K4-qNH"/>
                             <constraint firstItem="b14-i6-ZhN" firstAttribute="centerX" secondItem="kjQ-WJ-Hjd" secondAttribute="centerX" id="ifz-90-2J1"/>
                             <constraint firstItem="afO-lk-F4P" firstAttribute="trailing" secondItem="hlV-bE-jei" secondAttribute="trailing" constant="20" id="kKE-Qy-riI"/>
                             <constraint firstItem="hlV-bE-jei" firstAttribute="leading" secondItem="afO-lk-F4P" secondAttribute="leading" constant="20" id="qyB-7M-fLW"/>
@@ -1348,6 +1367,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="F0u-tT-ObE"/>
+        <segue reference="wY7-aJ-IAG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="50:50" width="105" height="81"/>
