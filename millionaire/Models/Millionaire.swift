@@ -24,29 +24,32 @@ protocol MillionaireProtocol: AnyObject {
     var answerResult: Bool {get set}
     var numberOfQuestion: Int {get set}
     var isHintTapped: [Bool] {get set}
-    init(view: MillionaireViewProtocol, numberOfQuestion: Int, isHintTapped: [Bool])
+    init(view: MillionaireViewProtocol, prepareChart: ChartPrepareProtocol, numberOfQuestion: Int, isHintTapped: [Bool])
 }
 
 protocol MillionaireViewProtocol: AnyObject {
     func setQuestion(question: Question)
-    func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int)
+    func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int, answerPercent: [AnswerData]?)
     func failure(numberOfQuestion: Int, numberOfAnswer: Int)
 }
 
 class Millionaire: MillionaireProtocol {
     
     weak var view: MillionaireViewProtocol!
+    var chartView = ChartView()
+    var prepareChart: ChartPrepareProtocol!
     var quiz = QuizMillionaire()
     var numberOfQuestion: Int
     var question: Question
     var answerResult: Bool
     var isHintTapped: [Bool]
-    required init(view: MillionaireViewProtocol, numberOfQuestion: Int, isHintTapped: [Bool]) {
+    required init(view: MillionaireViewProtocol, prepareChart: ChartPrepareProtocol, numberOfQuestion: Int, isHintTapped: [Bool]) {
         self.view = view
         self.numberOfQuestion = numberOfQuestion
         self.question = quiz.quiz[numberOfQuestion - 1]
         self.answerResult = false
         self.isHintTapped = isHintTapped
+        self.prepareChart = prepareChart
     }
     
     func answerTapped(answer: String, numberOfAnswer: Int) {
@@ -56,7 +59,7 @@ class Millionaire: MillionaireProtocol {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
             if answer == self.question.answer {
                 self.answerResult = true
-                self.view.success(successType: .answer, numberOfQuestion: self.numberOfQuestion, numberOfAnswer: numberOfAnswer)
+                self.view.success(successType: .answer, numberOfQuestion: self.numberOfQuestion, numberOfAnswer: numberOfAnswer, answerPercent: nil)
             } else {
                 self.view.failure(numberOfQuestion: self.numberOfQuestion, numberOfAnswer: numberOfAnswer)
             }
@@ -109,6 +112,10 @@ class Millionaire: MillionaireProtocol {
             }
             return hint
         case .hallAssistance:
+            isHintTapped[1] = true
+            let trueIndex = question.answerOptions.firstIndex(where: {$0 == question.answer})
+            let trueAnswer = prepareChart.generatePercentForAnswer(trueAnswer: trueIndex ?? 1)
+            view.success(successType: .hallAssistance, numberOfQuestion: numberOfQuestion, numberOfAnswer: trueIndex ?? 1, answerPercent: trueAnswer)
             return []
         case .callToFriends:
             return []

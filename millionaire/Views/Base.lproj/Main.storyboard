@@ -770,7 +770,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DZ9-Wx-pMF">
                                 <rect key="frame" x="40" y="138" width="334" height="738"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-Sh-izo">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-Sh-izo">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wD-rY-yQk">
@@ -807,7 +807,7 @@
                                             <constraint firstItem="XZP-bI-Joq" firstAttribute="leading" secondItem="oUi-Sh-izo" secondAttribute="leading" constant="10" id="vzi-rV-MdI"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JI-gE-Y2p">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JI-gE-Y2p">
                                         <rect key="frame" x="0.0" y="49.5" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-do-LiP">
@@ -844,7 +844,7 @@
                                             <constraint firstItem="7RS-sc-0ba" firstAttribute="leading" secondItem="5JI-gE-Y2p" secondAttribute="leading" constant="10" id="rfI-mJ-uvl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc0-NL-8xb">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc0-NL-8xb">
                                         <rect key="frame" x="0.0" y="99.5" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7b-15-vK1">
@@ -881,7 +881,7 @@
                                             <constraint firstItem="OrB-Dy-C3O" firstAttribute="top" secondItem="Sc0-NL-8xb" secondAttribute="top" id="Z6C-xr-sPd"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-lC-IpI">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-lC-IpI">
                                         <rect key="frame" x="0.0" y="149" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osw-1z-eEY">
@@ -918,7 +918,7 @@
                                             <constraint firstItem="arN-FC-E69" firstAttribute="leading" secondItem="sYT-lC-IpI" secondAttribute="leading" constant="10" id="xbF-ph-7aR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-se-TGr">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-se-TGr">
                                         <rect key="frame" x="0.0" y="199" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIV-fK-hSG">
@@ -955,7 +955,7 @@
                                             <constraint firstAttribute="bottom" secondItem="8fZ-QN-6f4" secondAttribute="bottom" id="zDT-n0-65i"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-0B-NPC">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-0B-NPC">
                                         <rect key="frame" x="0.0" y="248.5" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yx-Oz-D9K">
@@ -992,7 +992,7 @@
                                             <constraint firstItem="1Yx-Oz-D9K" firstAttribute="leading" secondItem="T3N-0B-NPC" secondAttribute="leading" id="poW-Cl-0qs"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h25-LI-kOk">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h25-LI-kOk">
                                         <rect key="frame" x="0.0" y="298.5" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9j-FK-cFy">
@@ -1029,7 +1029,7 @@
                                             <constraint firstAttribute="bottom" secondItem="X48-AP-uxP" secondAttribute="bottom" id="sH1-88-9sw"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-pQ-TWR">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-pQ-TWR">
                                         <rect key="frame" x="0.0" y="348" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFN-Gn-5Tv">
@@ -1066,7 +1066,7 @@
                                             <constraint firstAttribute="trailing" secondItem="KFN-Gn-5Tv" secondAttribute="trailing" id="xfm-DB-4to"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaQ-og-poJ">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaQ-og-poJ">
                                         <rect key="frame" x="0.0" y="398" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzY-fl-EFy">
@@ -1103,7 +1103,7 @@
                                             <constraint firstAttribute="bottom" secondItem="JzY-fl-EFy" secondAttribute="bottom" id="zku-zu-npJ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bz-Zv-Wqz">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bz-Zv-Wqz">
                                         <rect key="frame" x="0.0" y="447.5" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6U-AC-DSa">
@@ -1140,7 +1140,7 @@
                                             <constraint firstAttribute="bottom" secondItem="COj-TX-m4t" secondAttribute="bottom" id="rSg-J9-Myq"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-38-hLi">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-38-hLi">
                                         <rect key="frame" x="0.0" y="497.5" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-rL-Hjg">
@@ -1177,7 +1177,7 @@
                                             <constraint firstAttribute="bottom" secondItem="HCG-56-3br" secondAttribute="bottom" id="zyH-Y5-kCN"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eta-aI-wIT">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eta-aI-wIT">
                                         <rect key="frame" x="0.0" y="547" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oo-Ek-wKj">
@@ -1214,7 +1214,7 @@
                                             <constraint firstAttribute="bottom" secondItem="s2J-Wo-iKl" secondAttribute="bottom" id="ycV-ZF-2g9"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-2o-7z2">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-2o-7z2">
                                         <rect key="frame" x="0.0" y="597" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-oC-yB4">
@@ -1251,7 +1251,7 @@
                                             <constraint firstItem="Kh2-oC-yB4" firstAttribute="leading" secondItem="N8g-2o-7z2" secondAttribute="leading" id="jsP-xD-Fxm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfd-Hh-f30">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfd-Hh-f30">
                                         <rect key="frame" x="0.0" y="646.5" width="334" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-Qy-h4a">
@@ -1288,13 +1288,13 @@
                                             <constraint firstItem="nMg-hg-mRO" firstAttribute="top" secondItem="Vfd-Hh-f30" secondAttribute="top" id="pst-Mj-w5n"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-19-Eea">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-19-Eea">
                                         <rect key="frame" x="0.0" y="696.5" width="334" height="41.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMy-xQ-9c8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="Rectangle green"/>
+                                                <state key="normal" backgroundImage="Rectangle purple"/>
                                             </button>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-rX-C3b">
                                                 <rect key="frame" x="10" y="0.0" width="314" height="41.5"/>
@@ -1372,7 +1372,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="e5B-T3-C6I"/>
-        <segue reference="mqV-9W-Wl0"/>
         <segue reference="igJ-we-S7G"/>
         <segue reference="wY7-aJ-IAG"/>
     </inferredMetricsTieBreakers>
@@ -1382,7 +1381,6 @@
         <image name="Line 2" width="112.5" height="89.5"/>
         <image name="Rectangle 4" width="300" height="100"/>
         <image name="Rectangle blue" width="320" height="39"/>
-        <image name="Rectangle green" width="320" height="38"/>
         <image name="Rectangle purple" width="320" height="38"/>
         <image name="Rectangle white" width="261" height="47"/>
         <image name="Rectangle yellow" width="320" height="38"/>
