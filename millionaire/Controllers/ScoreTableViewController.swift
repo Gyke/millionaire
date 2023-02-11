@@ -14,6 +14,7 @@ class ScoreTableViewController: UIViewController {
     var questionNumber: Int?
     var answerResult: Bool?
     var isHint: [Bool]?
+    let recognizer = UITapGestureRecognizer()
     var money: Int?
    
     //MARK: - IBOutlet
@@ -39,6 +40,9 @@ class ScoreTableViewController: UIViewController {
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
+        view.addGestureRecognizer(recognizer)
         
         // Do any additional setup after loading the view.
     }
@@ -79,10 +83,15 @@ class ScoreTableViewController: UIViewController {
     
         
     }
-    
-    
-    
-    
+
+    @objc func handleTapGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        guard let result = answerResult else { return }
+        if result {
+            self.performSegue(withIdentifier: "returnToGame", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "goToFinish", sender: self)
+        }
+    }
     
     func goToNextScreeWithDelay(result: Bool) {
         
@@ -102,11 +111,11 @@ class ScoreTableViewController: UIViewController {
         guard let result = answerResult else { return }
         guard let number = questionNumber else { return }
         lightAnswer(result: result, questionNumber: number)
-        if number < 15 {
-            goToNextScreeWithDelay(result: result)
-        } else {
-            goToNextScreeWithDelay(result: false)
-        }
+//        if number < 15 {
+//            goToNextScreeWithDelay(result: result)
+//        } else {
+//            goToNextScreeWithDelay(result: false)
+//        }
     }
     
 
@@ -117,7 +126,8 @@ class ScoreTableViewController: UIViewController {
             let view = segue.destination as! GameViewController
             guard let nextNumber = questionNumber else { return }
             guard let isHint = isHint else { return }
-            let millionaire = Millionaire(view: view, numberOfQuestion: nextNumber + 1, isHintTapped: isHint )
+            let chartPrepare = ChartPrepare()
+            let millionaire = Millionaire(view: view, prepareChart: chartPrepare, numberOfQuestion: nextNumber + 1, isHintTapped: isHint )
             view.millionaire = millionaire
         } else if segue.identifier == "goToFinish" {
             let view = segue.destination as! FinalViewController

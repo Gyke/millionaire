@@ -35,6 +35,11 @@
 		5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888ADD029915B2A002C00BE /* GameViewController.swift */; };
 		A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC84299384DA004F514C /* ScoreTableViewController.swift */; };
 		A54FDC87299408A1004F514C /* ButtonsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC86299408A1004F514C /* ButtonsColor.swift */; };
+		A54FDC8D29952864004F514C /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC8C29952864004F514C /* ChartData.swift */; };
+		A54FDC9329956946004F514C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC9229956946004F514C /* RegisterViewController.swift */; };
+		A54FDC9529959BD2004F514C /* ChartPrepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC9429959BD2004F514C /* ChartPrepare.swift */; };
+		A54FDC992996788E004F514C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC982996788E004F514C /* ChartView.swift */; };
+		A5D3CA3129968B9A0009798D /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3CA3029968B9A0009798D /* ChartView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +73,11 @@
 		5888ADD029915B2A002C00BE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A54FDC84299384DA004F514C /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		A54FDC86299408A1004F514C /* ButtonsColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsColor.swift; sourceTree = "<group>"; };
+		A54FDC8C29952864004F514C /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		A54FDC9229956946004F514C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A54FDC9429959BD2004F514C /* ChartPrepare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPrepare.swift; sourceTree = "<group>"; };
+		A54FDC982996788E004F514C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		A5D3CA3029968B9A0009798D /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 			children = (
 				2F911FEE2990288F002978CE /* millionaire */,
 				2F911FED2990288F002978CE /* Products */,
+				A54FDC91299568C9004F514C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +131,8 @@
 				5160CCFB299169DC0070115E /* Question.swift */,
 				5160CCFD29916A120070115E /* QuizMillionaire.swift */,
 				A54FDC86299408A1004F514C /* ButtonsColor.swift */,
+				A54FDC8C29952864004F514C /* ChartData.swift */,
+				A54FDC9429959BD2004F514C /* ChartPrepare.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2F911FF52990288F002978CE /* Main.storyboard */,
+				A5D3CA3029968B9A0009798D /* ChartView.xib */,
 				2F911FFA29902890002978CE /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -137,9 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				2F911FF32990288F002978CE /* StartViewController.swift */,
+				A54FDC9229956946004F514C /* RegisterViewController.swift */,
 				583F1CAF29910D54004A4D37 /* RulesViewController.swift */,
 				5888ADD029915B2A002C00BE /* GameViewController.swift */,
 				A54FDC84299384DA004F514C /* ScoreTableViewController.swift */,
+				A54FDC982996788E004F514C /* ChartView.swift */,
 				57317259299441A600C38F4C /* RegisterViewController.swift */,
 				5731726229955C3D00C38F4C /* FinalViewController.swift */,
 			);
@@ -171,6 +187,13 @@
 				51CF038A2993F555006DF7C0 /* wrongAnswer.mp3 */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		A54FDC91299568C9004F514C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +269,7 @@
 				51CF038C2993F555006DF7C0 /* tooltip_Selection.mp3 in Resources */,
 				51CF038F2993F555006DF7C0 /* correctAnswer.mp3 in Resources */,
 				51CF03912993F555006DF7C0 /* reflectionTime.mp3 in Resources */,
+				A5D3CA3129968B9A0009798D /* ChartView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,16 +283,19 @@
 				5160CCFC299169DC0070115E /* Question.swift in Sources */,
 				A54FDC87299408A1004F514C /* ButtonsColor.swift in Sources */,
 				2F911FF42990288F002978CE /* StartViewController.swift in Sources */,
-				5731725A299441A600C38F4C /* RegisterViewController.swift in Sources */,
 				5160CCFE29916A120070115E /* QuizMillionaire.swift in Sources */,
+				A54FDC992996788E004F514C /* ChartView.swift in Sources */,
 				583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
 				5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */,
 				5189F2602992C2130091C636 /* AudioPlayer.swift in Sources */,
+				A54FDC9529959BD2004F514C /* ChartPrepare.swift in Sources */,
 				5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */,
+				A54FDC9329956946004F514C /* RegisterViewController.swift in Sources */,
 				A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */,
 				2F911FF22990288F002978CE /* SceneDelegate.swift in Sources */,
+				A54FDC8D29952864004F514C /* ChartData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

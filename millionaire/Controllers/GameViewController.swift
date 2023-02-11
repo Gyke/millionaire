@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 class GameViewController: UIViewController {
@@ -45,6 +46,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var hallButton: UIButton!
     @IBOutlet weak var friendButton: UIButton!
     
+    @IBOutlet weak var chartView: UIView!
+    
     //MARK: - Variables
     
     
@@ -54,6 +57,8 @@ class GameViewController: UIViewController {
     var millionaire: MillionaireProtocol!
     
     let money: [Int] = [100, 200, 300, 400, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000]
+    
+    
     
     //MARK: - ViewDidLoad
     
@@ -98,7 +103,17 @@ class GameViewController: UIViewController {
     
     @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
         timer.invalidate()
+        musicGame.stop()
+        self.performSegue(withIdentifier: "goToFinish", sender: self)
     }
+    
+    
+    @IBAction func tapOnDisplay(_ sender: Any) {
+        
+        
+    }
+    
+    
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
         
@@ -116,12 +131,14 @@ class GameViewController: UIViewController {
             fiftyButton.isUserInteractionEnabled = false
             let percentage = millionaire.hintTapped(hintType: .hintFifty)
             if percentage[0] == 0 { answerOneOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[1] == 0 { answerTwoOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[2] == 0 { answerThreeOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[3] == 0 { answerFourOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[1] == 0 { answerTwoOutletView.alpha = 0 ; answerTwoButton.isUserInteractionEnabled = false}
+            if percentage[2] == 0 { answerThreeOutletView.alpha = 0 ; answerThreeButton.isUserInteractionEnabled = false}
+            if percentage[3] == 0 { answerFourOutletView.alpha = 0 ; answerFourButton.isUserInteractionEnabled = false}
             
         case 2:
-            return
+            hallCloseView.alpha = 1
+            hallButton.isUserInteractionEnabled = false
+            let percent = millionaire.hintTapped(hintType: .hallAssistance)
         case 3:
             return
         default:
@@ -130,7 +147,11 @@ class GameViewController: UIViewController {
     }
     
     //MARK: - Methods
-
+    
+    func makeChartView()  {
+        
+        chartView.isHidden = false
+    }
     @objc func updateTimer() {
         if totalTime != 0 {
             totalTime -= 1
@@ -147,11 +168,12 @@ class GameViewController: UIViewController {
     }
 
 }
+    
 
 //MARK: - Extensions
 
 extension GameViewController: MillionaireViewProtocol {
-   
+    
     func setQuestion(question: Question) {
         questionLabel.text = question.text
         answerOne.text = question.answerOptions[0]
@@ -172,12 +194,12 @@ extension GameViewController: MillionaireViewProtocol {
             friendCloseView.alpha = 1
             friendButton.isUserInteractionEnabled = false
         }
-            
+        
     }
     
     //MARK: - View - Success
     
-    func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int) {
+    func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int, answerPercent: [AnswerData]?) {
         
         switch successType {
         case .answer:
@@ -192,11 +214,23 @@ extension GameViewController: MillionaireViewProtocol {
                 self.performSegue(withIdentifier: "goToResult", sender: self)
             })
         case .hintFifty:
+            
             fiftyCloseView.alpha = 1.0
             fiftyCloseView.isUserInteractionEnabled = false
             fiftyButton.isUserInteractionEnabled = false
+            
         case .hallAssistance:
-            return
+            
+            hallCloseView.alpha = 1.0
+            hallCloseView.isUserInteractionEnabled = false
+            hallButton.isUserInteractionEnabled = false
+            makeChartView()
+            if let chartData = answerPercent{
+                ChartView().moveBar(chartData: chartData)
+                self.view.layoutIfNeeded()
+                ChartView().layoutIfNeeded()
+            }
+            
         case .callToFriends:
             return
         }
@@ -241,6 +275,8 @@ extension GameViewController: MillionaireViewProtocol {
             return
         }
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
