@@ -252,7 +252,11 @@ extension GameViewController: MillionaireViewProtocol {
             view.questionNumber = millionaire.numberOfQuestion
             view.answerResult = millionaire.answerResult
             view.isHint = millionaire.isHintTapped
-            view.money = money[millionaire.numberOfQuestion - 1]
+            let moneyIndex = Int((millionaire.numberOfQuestion - 1) / 5)
+            view.money = moneyIndex == 0 ? 0 : money[5 * moneyIndex]
+        } else if segue.identifier == "goToFinish" {
+            let view = segue.destination as! FinalViewController
+            view.win = millionaire.numberOfQuestion == 1 ? 0 : money[millionaire.numberOfQuestion - 2]
         }
     }
     
