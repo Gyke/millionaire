@@ -51,7 +51,7 @@ class FinalViewController: UIViewController {
         musicEnd.stop()
         if segue.identifier == "goToGame" {
             let view = segue.destination as! GameViewController
-            let millionaire = Millionaire(view: view, numberOfQuestion: 1, isHintTapped: [false, false, false])
+            let millionaire = Millionaire(view: view, prepareChart: ChartPrepare(), numberOfQuestion: 1, isHintTapped: [false, false, false] )
             view.millionaire = millionaire
         }
     }
