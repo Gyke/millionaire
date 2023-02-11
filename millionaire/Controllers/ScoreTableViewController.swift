@@ -15,6 +15,7 @@ class ScoreTableViewController: UIViewController {
     var answerResult: Bool?
     var isHint: [Bool]?
     let recognizer = UITapGestureRecognizer()
+    var money: Int?
    
     //MARK: - IBOutlet
     
@@ -90,12 +91,12 @@ class ScoreTableViewController: UIViewController {
     
     func goToNextScreeWithDelay(result: Bool) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
         
             if result {
                 self.performSegue(withIdentifier: "returnToGame", sender: self)
             } else {
-                self.performSegue(withIdentifier: "goToStart", sender: self)
+                self.performSegue(withIdentifier: "goToFinish", sender: self)
             }
         })
         
@@ -124,6 +125,10 @@ class ScoreTableViewController: UIViewController {
             let chartPrepare = ChartPrepare()
             let millionaire = Millionaire(view: view, prepareChart: chartPrepare, numberOfQuestion: nextNumber + 1, isHintTapped: isHint )
             view.millionaire = millionaire
+        } else if segue.identifier == "goToFinish" {
+            let view = segue.destination as! FinalViewController
+            view.result = "Проигрыш"
+            view.win = money
         }
     }
 

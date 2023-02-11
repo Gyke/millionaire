@@ -9,7 +9,7 @@ import UIKit
 
 class RulesViewController: UIViewController {
     
-    
+    let musicRules = AudioPlayer()
 
     @IBOutlet weak var rulesLabel: UILabel!
     
@@ -17,6 +17,10 @@ class RulesViewController: UIViewController {
         super.viewDidLoad()
         
         rulesLabel.text = rules
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        musicRules.play(sound: "rasskazyivayut-igroku-pravila")
     }
     
 
@@ -68,6 +72,7 @@ class RulesViewController: UIViewController {
 
 """
     @IBAction func closeButtonPressed(_ sender: UIButton) {
+        musicRules.stop()
         self.dismiss(animated: true, completion: nil)
     }
     
