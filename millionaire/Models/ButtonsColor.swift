@@ -18,11 +18,11 @@ extension ButtonColor {
     public var image: UIImage? {
         switch self {
         case .red:
-            return UIImage(named: "Rectangle yellow")
+            return UIImage(named: "Rectangle red")
         case .green:
             return UIImage(named: "Rectangle green")
         case .grey:
-            return UIImage(named: "Rectangle purple")
+            return UIImage(named: "Rectangle gray")
         case .blue:
             return UIImage(named: "Rectangle blue")
         }
