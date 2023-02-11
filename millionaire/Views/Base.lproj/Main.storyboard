@@ -463,6 +463,7 @@
                         <outlet property="questionNumberLabel" destination="TFC-JA-ljD" id="2fl-rR-jLF"/>
                         <outlet property="timerLabel" destination="cci-rY-Umy" id="dkS-zx-u8c"/>
                         <segue destination="8Yg-WX-qvm" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="mqV-9W-Wl0"/>
+                        <segue destination="2EQ-Zu-6wp" kind="presentation" identifier="goToFinish" modalPresentationStyle="fullScreen" id="k51-Ej-cCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHS-iG-2Re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
