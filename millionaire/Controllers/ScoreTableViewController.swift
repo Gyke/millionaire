@@ -34,26 +34,14 @@ class ScoreTableViewController: UIViewController {
     @IBOutlet weak var thirteenQuestionButton: UIButton!
     @IBOutlet weak var fourteenQuestionButton: UIButton!
     @IBOutlet weak var fifteenQuestionButton: UIButton!
-
+    var buttonsArray: [UIButton] = []
+    
     
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
-        view.addGestureRecognizer(recognizer)
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    //MARK: - Methods
-    
-    func lightAnswer(result: Bool, questionNumber: Int) {
-        
-        var buttonsArray: [UIButton] = [
+        self.buttonsArray = [
             oneQuestionButton,
             twoQuestionButton,
             threeQuestionButton,
@@ -70,6 +58,19 @@ class ScoreTableViewController: UIViewController {
             fourteenQuestionButton,
             fifteenQuestionButton
         ]
+        buttonsArray.forEach({ $0.isUserInteractionEnabled = false })
+
+        recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
+        view.addGestureRecognizer(recognizer)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    //MARK: - Methods
+    
+    func lightAnswer(result: Bool, questionNumber: Int) {
         
         buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)
         
@@ -111,11 +112,6 @@ class ScoreTableViewController: UIViewController {
         guard let result = answerResult else { return }
         guard let number = questionNumber else { return }
         lightAnswer(result: result, questionNumber: number)
-//        if number < 15 {
-//            goToNextScreeWithDelay(result: result)
-//        } else {
-//            goToNextScreeWithDelay(result: false)
-//        }
     }
     
 
