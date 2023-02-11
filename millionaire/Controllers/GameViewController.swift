@@ -29,6 +29,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
     
+    @IBOutlet weak var answerOneOutletView: UIView!
+    @IBOutlet weak var answerTwoOutletView: UIView!
+    @IBOutlet weak var answerThreeOutletView: UIView!
+    @IBOutlet weak var answerFourOutletView: UIView!
+    
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionMoneyLabel: UILabel!
     
@@ -94,10 +99,10 @@ class GameViewController: UIViewController {
             fiftyCloseView.alpha = 1
             fiftyButton.isUserInteractionEnabled = false
             let percentage = millionaire.hintTapped(hintType: .hintFifty)
-            if percentage[0] == 0 { answerOneButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[1] == 0 { answerTwoButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[2] == 0 { answerThreeButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[3] == 0 { answerFourButton.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[0] == 0 { answerOneOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[1] == 0 { answerTwoOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[2] == 0 { answerThreeOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[3] == 0 { answerFourOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
             
         case 2:
             return
@@ -135,8 +140,8 @@ extension GameViewController: MillionaireViewProtocol {
         answerTwo.text = question.answerOptions[1]
         answerThree.text = question.answerOptions[2]
         answerFour.text = question.answerOptions[3]
-        questionNumberLabel.text = "Question: \(millionaire.numberOfQuestion)"
-        questionMoneyLabel.text = "\(money[millionaire.numberOfQuestion - 1]) RUB"
+        questionNumberLabel.text = "Вопрос: \(millionaire.numberOfQuestion)"
+        questionMoneyLabel.text = "\(money[millionaire.numberOfQuestion - 1]) ₽"
         if millionaire.isHintTapped[0] == true {
             fiftyCloseView.alpha = 1
             fiftyButton.isUserInteractionEnabled = false

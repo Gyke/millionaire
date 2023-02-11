@@ -15,10 +15,13 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        musicStart.play(sound: "musical_intro")
-        
+
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        musicStart.play(sound: "musical_intro")
     }
     
     
