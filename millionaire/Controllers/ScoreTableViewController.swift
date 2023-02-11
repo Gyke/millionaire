@@ -36,7 +36,6 @@ class ScoreTableViewController: UIViewController {
 
     
     
-    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,7 @@ class ScoreTableViewController: UIViewController {
     
     func lightAnswer(result: Bool, questionNumber: Int) {
         
-        let buttonsArray: [UIButton] = [
+        var buttonsArray: [UIButton] = [
             oneQuestionButton,
             twoQuestionButton,
             threeQuestionButton,
@@ -70,8 +69,20 @@ class ScoreTableViewController: UIViewController {
         
         buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)
         
+        //Изменение изображения кнопк, по мере привильх ответов от пользователя.
+        if result == true {
+            for i in 0..<questionNumber {
+                buttonsArray[i].setBackgroundImage(UIImage(named: "Rectangle green"), for: .normal)
+            }
+        }
+
+    
         
     }
+    
+    
+    
+    
     
     func goToNextScreeWithDelay(result: Bool) {
         
