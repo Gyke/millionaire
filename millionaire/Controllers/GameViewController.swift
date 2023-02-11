@@ -79,7 +79,12 @@ class GameViewController: UIViewController {
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
-        
+                
+                //Деактивизация кнопок подсказок
+                fiftyButton.isEnabled = false
+                hallButton.isEnabled = false
+                friendButton.isEnabled = false
+                //Деактивизация кнопок вариантов ответов
                 answerOneButton.isUserInteractionEnabled = false
                 answerTwoButton.isUserInteractionEnabled = false
                 answerThreeButton.isUserInteractionEnabled = false
@@ -97,7 +102,7 @@ class GameViewController: UIViewController {
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
         
-        //Музыка подсказки 50/50
+        //Музыка подсказки
         musicGame.play(sound: "podskazka-50-na-50")
         //Запуск музыки для размышления
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
