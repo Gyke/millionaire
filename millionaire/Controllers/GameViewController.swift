@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
     
     
 
-    
+    let musicGame = AudioPlayer()
     
 
     //MARK: - IBOutlets
@@ -60,12 +60,15 @@ class GameViewController: UIViewController {
     //MARK: - ViewDidAppear
     
     override func viewDidAppear(_ animated: Bool) {
+        musicGame.play(sound: "reflectionTime")
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer),userInfo: nil, repeats: true)
     }
     
     //MARK: - IBActions
     
     @IBAction func answerTapped(_ sender: UIButton) {
+        
+        
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
@@ -156,7 +159,8 @@ extension GameViewController: MillionaireViewProtocol {
         switch successType {
         case .answer:
             //проигрываем музыку правильного ответа
-            
+            musicGame.stop()
+            musicGame.play(sound: "correctAnswer")
             //изменение цвета кнопки
             setButtonBackground(answerNumber: numberOfAnswer, colour: .green)
             
@@ -181,6 +185,8 @@ extension GameViewController: MillionaireViewProtocol {
     func failure(numberOfQuestion: Int, numberOfAnswer: Int) {
         
         //проигрываем музыку в случае неудачи
+        musicGame.stop()
+        musicGame.play(sound: "wrongAnswer")
         
         setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
         
