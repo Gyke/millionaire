@@ -85,7 +85,7 @@ class ScoreTableViewController: UIViewController {
         if result {
             self.performSegue(withIdentifier: "returnToGame", sender: self)
         } else {
-            self.performSegue(withIdentifier: "goToStart", sender: self)
+            self.performSegue(withIdentifier: "goToFinish", sender: self)
         }
     }
     
@@ -107,11 +107,11 @@ class ScoreTableViewController: UIViewController {
         guard let result = answerResult else { return }
         guard let number = questionNumber else { return }
         lightAnswer(result: result, questionNumber: number)
-        if number < 15 {
-            //goToNextScreeWithDelay(result: result)
-        } else {
-            goToNextScreeWithDelay(result: false)
-        }
+//        if number < 15 {
+//            goToNextScreeWithDelay(result: result)
+//        } else {
+//            goToNextScreeWithDelay(result: false)
+//        }
     }
     
 

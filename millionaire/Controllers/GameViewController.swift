@@ -149,9 +149,9 @@ class GameViewController: UIViewController {
     //MARK: - Methods
     
     func makeChartView()  {
-       
+        
         chartView.isHidden = false
-
+    }
     @objc func updateTimer() {
         if totalTime != 0 {
             totalTime -= 1
@@ -168,6 +168,7 @@ class GameViewController: UIViewController {
     }
 
 }
+    
 
 //MARK: - Extensions
 
