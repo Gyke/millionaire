@@ -98,6 +98,8 @@ class GameViewController: UIViewController {
     
     @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
         timer.invalidate()
+        musicGame.stop()
+        self.performSegue(withIdentifier: "goToFinish", sender: self)
     }
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
