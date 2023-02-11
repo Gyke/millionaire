@@ -38,13 +38,11 @@ class FinalViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        musicEnd.stop()
         if segue.identifier == "goToGame" {
             let view = segue.destination as! GameViewController
             let millionaire = Millionaire(view: view, numberOfQuestion: 1, isHintTapped: [false, false, false])
             view.millionaire = millionaire
-        } else if segue.identifier == "goToMain" {
-//            let view = segue.destination as! StartViewController
-//            TODO: Пофиксить воспроизведение музыки
         }
     }
 }

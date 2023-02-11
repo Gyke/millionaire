@@ -441,12 +441,16 @@
                     <connections>
                         <outlet property="answerFour" destination="Ptj-nU-yfp" id="X5e-k1-fbh"/>
                         <outlet property="answerFourButton" destination="YC8-vS-iYs" id="hSe-bj-gc3"/>
+                        <outlet property="answerFourOutletView" destination="uGc-DX-7V7" id="2pd-Li-DvU"/>
                         <outlet property="answerOne" destination="sSy-Bs-5jD" id="qfn-lN-b11"/>
                         <outlet property="answerOneButton" destination="hNW-1A-xYV" id="I9L-GO-B9K"/>
+                        <outlet property="answerOneOutletView" destination="Wfo-bo-Gqy" id="wvd-Tg-DO0"/>
                         <outlet property="answerThree" destination="YD2-Dp-f3k" id="cMJ-JS-K19"/>
                         <outlet property="answerThreeButton" destination="xGv-mJ-oX5" id="mDf-Ty-zGN"/>
+                        <outlet property="answerThreeOutletView" destination="5UX-le-Osu" id="hNb-JK-qQ0"/>
                         <outlet property="answerTwo" destination="epP-Zy-ZnN" id="aM0-Kz-HOT"/>
                         <outlet property="answerTwoButton" destination="bqp-8z-HgM" id="gUq-Ey-yaI"/>
+                        <outlet property="answerTwoOutletView" destination="n7a-NO-Lcu" id="ZKC-8C-2Nz"/>
                         <outlet property="fiftyButton" destination="tq7-Ms-WiP" id="y6r-7f-9Dx"/>
                         <outlet property="fiftyCloseView" destination="vrq-uG-eGZ" id="rkV-cZ-neF"/>
                         <outlet property="friendButton" destination="05n-aq-DHn" id="8Zj-i3-bHA"/>
@@ -1366,7 +1370,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F0u-tT-ObE"/>
+        <segue reference="igJ-we-S7G"/>
         <segue reference="wY7-aJ-IAG"/>
     </inferredMetricsTieBreakers>
     <resources>
