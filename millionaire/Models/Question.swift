@@ -14,7 +14,7 @@ struct Question {
     
     init( a: String, b: [String], correctAnswer: String ){
         text = a
-        answerOptions = b
+        answerOptions = b.shuffled()
         answer = correctAnswer
     }
 }
