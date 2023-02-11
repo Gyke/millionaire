@@ -20,7 +20,7 @@ class RulesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        musicRules.play(sound: "zvuk-rules")
+        musicRules.play(sound: "rasskazyivayut-igroku-pravila")
     }
     
 

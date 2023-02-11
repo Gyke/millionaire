@@ -8,8 +8,15 @@
 import UIKit
 
 class FinalViewController: UIViewController {
-    
+    //Экземпляр плеера
     let musicEnd = AudioPlayer()
+    //Для постоянного воспроизведения
+    func playMusic(loop: Bool) {
+        musicEnd.play(sound: "endOfGame")
+            if loop {
+                musicEnd.player?.numberOfLoops = -1
+            }
+        }
     
     var win: Int?
     var result: String?
@@ -25,10 +32,13 @@ class FinalViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        musicEnd.play(sound: "endOfGame")
+        playMusic(loop: true)
     }
     
     @IBAction func playAgeinButtonPressed(_ sender: UIButton) {
+        
+        musicEnd.stop()
+        
         self.performSegue(withIdentifier: "goToGame", sender: self)
     }
     

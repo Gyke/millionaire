@@ -75,7 +75,7 @@ class ScoreTableViewController: UIViewController {
     
     func goToNextScreeWithDelay(result: Bool) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
         
             if result {
                 self.performSegue(withIdentifier: "returnToGame", sender: self)

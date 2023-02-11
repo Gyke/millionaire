@@ -65,7 +65,7 @@ class GameViewController: UIViewController {
     //MARK: - ViewDidAppear
     
     override func viewDidAppear(_ animated: Bool) {
-        musicGame.play(sound: "reflectionTime")
+        musicGame.play(sound: "zvuk-fon")
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer),userInfo: nil, repeats: true)
     }
     
@@ -73,6 +73,8 @@ class GameViewController: UIViewController {
     
     @IBAction func answerTapped(_ sender: UIButton) {
         
+        //Музака напряженная перед ответом
+        musicGame.play(sound: "zvuk-napryajeniya-pered-otv")
         
         for tag in 1...4 {
             if sender.tag == tag {
@@ -94,6 +96,15 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
+        
+        //Музыка подсказки 50/50
+        musicGame.play(sound: "podskazka-50-na-50")
+        //Запуск музыки для размышления
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.musicGame.play(sound: "reflectionTime")
+            }
+        
+        
         switch sender.tag {
         case 1:
             fiftyCloseView.alpha = 1
@@ -124,6 +135,7 @@ class GameViewController: UIViewController {
             }
         } else {
             timer.invalidate()
+            
         }
         
     }
@@ -166,6 +178,7 @@ extension GameViewController: MillionaireViewProtocol {
             //проигрываем музыку правильного ответа
             musicGame.stop()
             musicGame.play(sound: "correctAnswer")
+            
             //изменение цвета кнопки
             setButtonBackground(answerNumber: numberOfAnswer, colour: .green)
             
@@ -192,6 +205,7 @@ extension GameViewController: MillionaireViewProtocol {
         //проигрываем музыку в случае неудачи
         musicGame.stop()
         musicGame.play(sound: "wrongAnswer")
+            
         
         setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
         
@@ -199,7 +213,7 @@ extension GameViewController: MillionaireViewProtocol {
             setButtonBackground(answerNumber: index + 1, colour: .green)
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             self.performSegue(withIdentifier: "goToResult", sender: self)
         })
         
