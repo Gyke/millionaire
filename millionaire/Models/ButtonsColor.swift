@@ -22,7 +22,7 @@ extension ButtonColor {
         case .green:
             return UIImage(named: "Rectangle green")
         case .grey:
-            return UIImage(named: "Rectangle purple")
+            return UIImage(named: "Rectangle white")
         case .blue:
             return UIImage(named: "Rectangle blue")
         }

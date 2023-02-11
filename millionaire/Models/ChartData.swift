@@ -8,6 +8,9 @@
 import Foundation
 
 struct AnswerData {
-    let answerNumber: Int
-    let percentage: Int
+    
+    var answerNumber: Int
+    var percentage: Int
+    
 }
+
