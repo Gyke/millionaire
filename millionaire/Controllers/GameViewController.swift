@@ -29,7 +29,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerTwoButton: UIButton!
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
-    
+    @IBOutlet weak var getPrizeButton: UIButton!
+
     @IBOutlet weak var answerOneOutletView: UIView!
     @IBOutlet weak var answerTwoOutletView: UIView!
     @IBOutlet weak var answerThreeOutletView: UIView!
@@ -89,6 +90,7 @@ class GameViewController: UIViewController {
                 fiftyButton.isEnabled = false
                 hallButton.isEnabled = false
                 friendButton.isEnabled = false
+                getPrizeButton.isEnabled = false
                 //Деактивизация кнопок вариантов ответов
                 answerOneButton.isUserInteractionEnabled = false
                 answerTwoButton.isUserInteractionEnabled = false
@@ -284,7 +286,11 @@ extension GameViewController: MillionaireViewProtocol {
             view.questionNumber = millionaire.numberOfQuestion
             view.answerResult = millionaire.answerResult
             view.isHint = millionaire.isHintTapped
-            view.money = money[millionaire.numberOfQuestion - 1]
+            let moneyIndex = Int((millionaire.numberOfQuestion - 1) / 5)
+            view.money = moneyIndex == 0 ? 0 : money[5 * moneyIndex]
+        } else if segue.identifier == "goToFinish" {
+            let view = segue.destination as! FinalViewController
+            view.win = millionaire.numberOfQuestion == 1 ? 0 : money[millionaire.numberOfQuestion - 2]
         }
     }
     
