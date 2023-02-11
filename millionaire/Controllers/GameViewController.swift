@@ -28,7 +28,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerTwoButton: UIButton!
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
-    
+    @IBOutlet weak var getPrizeButton: UIButton!
+
     @IBOutlet weak var answerOneOutletView: UIView!
     @IBOutlet weak var answerTwoOutletView: UIView!
     @IBOutlet weak var answerThreeOutletView: UIView!
@@ -84,6 +85,7 @@ class GameViewController: UIViewController {
                 fiftyButton.isEnabled = false
                 hallButton.isEnabled = false
                 friendButton.isEnabled = false
+                getPrizeButton.isEnabled = false
                 //Деактивизация кнопок вариантов ответов
                 answerOneButton.isUserInteractionEnabled = false
                 answerTwoButton.isUserInteractionEnabled = false

@@ -455,6 +455,7 @@
                         <outlet property="fiftyCloseView" destination="vrq-uG-eGZ" id="rkV-cZ-neF"/>
                         <outlet property="friendButton" destination="05n-aq-DHn" id="8Zj-i3-bHA"/>
                         <outlet property="friendCloseView" destination="cg1-hh-6ac" id="8AJ-9h-Xz0"/>
+                        <outlet property="getPrizeButton" destination="XRw-af-g1R" id="IbR-6C-QpB"/>
                         <outlet property="hallButton" destination="Djj-At-3y9" id="y0u-6U-MfH"/>
                         <outlet property="hallCloseView" destination="Rsm-6a-uJg" id="k9b-EH-Wx6"/>
                         <outlet property="questionLabel" destination="56w-CK-oC4" id="uT3-jO-rgw"/>
@@ -1371,10 +1372,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e5B-T3-C6I"/>
         <segue reference="mqV-9W-Wl0"/>
-        <segue reference="igJ-we-S7G"/>
-        <segue reference="wY7-aJ-IAG"/>
+        <segue reference="k51-Ej-cCA"/>
+        <segue reference="ZT9-cp-LXM"/>
+        <segue reference="jXF-OP-Ukq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="50:50" width="105" height="81"/>

@@ -33,24 +33,14 @@ class ScoreTableViewController: UIViewController {
     @IBOutlet weak var thirteenQuestionButton: UIButton!
     @IBOutlet weak var fourteenQuestionButton: UIButton!
     @IBOutlet weak var fifteenQuestionButton: UIButton!
-
+    var buttonsArray: [UIButton] = []
     
     
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    //MARK: - Methods
-    
-    func lightAnswer(result: Bool, questionNumber: Int) {
-        
-        let buttonsArray: [UIButton] = [
+        self.buttonsArray = [
             oneQuestionButton,
             twoQuestionButton,
             threeQuestionButton,
@@ -68,9 +58,16 @@ class ScoreTableViewController: UIViewController {
             fifteenQuestionButton
         ]
         
+        buttonsArray.forEach({ $0.isUserInteractionEnabled = false })
+    }
+    
+    
+    
+    //MARK: - Methods
+    
+    func lightAnswer(result: Bool, questionNumber: Int) {
+        
         buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)
-        
-        
     }
     
     func goToNextScreeWithDelay(result: Bool) {
