@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
     //MARK: - ViewDidAppear
     
     override func viewDidAppear(_ animated: Bool) {
-        musicGame.play(sound: "reflectionTime")
+        musicGame.play(sound: "zvuk-fon")
         timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(updateTimer),userInfo: nil, repeats: true)
     }
     
@@ -89,6 +89,15 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
+        
+        //Музыка подсказки 50/50
+        musicGame.play(sound: "podskazka-50-na-50")
+        //Запуск музыки для размышления
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.musicGame.play(sound: "reflectionTime")
+            }
+        
+        
         switch sender.tag {
         case 1:
             fiftyCloseView.alpha = 1
@@ -119,6 +128,7 @@ class GameViewController: UIViewController {
             }
         } else {
             timer.invalidate()
+            
         }
         
     }
