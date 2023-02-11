@@ -131,9 +131,9 @@ class GameViewController: UIViewController {
             fiftyButton.isUserInteractionEnabled = false
             let percentage = millionaire.hintTapped(hintType: .hintFifty)
             if percentage[0] == 0 { answerOneOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[1] == 0 { answerTwoOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[2] == 0 { answerThreeOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
-            if percentage[3] == 0 { answerFourOutletView.alpha = 0 ; answerOneButton.isUserInteractionEnabled = false}
+            if percentage[1] == 0 { answerTwoOutletView.alpha = 0 ; answerTwoButton.isUserInteractionEnabled = false}
+            if percentage[2] == 0 { answerThreeOutletView.alpha = 0 ; answerThreeButton.isUserInteractionEnabled = false}
+            if percentage[3] == 0 { answerFourOutletView.alpha = 0 ; answerFourButton.isUserInteractionEnabled = false}
             
         case 2:
             hallCloseView.alpha = 1
