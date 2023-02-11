@@ -26,7 +26,7 @@ class FinalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        winAmount.text = String(win!)
+        winAmount.text = String(win ?? 0)
         resultGameLabel.text = result
 
     }

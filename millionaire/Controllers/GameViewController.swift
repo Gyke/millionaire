@@ -135,7 +135,8 @@ class GameViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-            
+            musicGame.stop()
+            self.performSegue(withIdentifier: "goToFinish", sender: self)
         }
         
     }
