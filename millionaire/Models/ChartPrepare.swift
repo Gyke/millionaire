@@ -9,34 +9,27 @@ import Foundation
 
 protocol ChartPrepareProtocol: AnyObject {
     func generatePercentForAnswer(trueAnswer: Int) -> [AnswerData]
-    var data: [AnswerData] {get set}
+    
 }
 
 class ChartPrepare: ChartPrepareProtocol, ObservableObject  {
-
-//    var trueAnswerNumber: Int = 1
+    
+    //    var trueAnswerNumber: Int = 1
     var truePercent: Int = 60
-    var data: [AnswerData] = [AnswerData(answerNumber: 0, percentage: 0),
-                              AnswerData(answerNumber: 0, percentage: 0),
-                              AnswerData(answerNumber: 0, percentage: 0),
-                              AnswerData(answerNumber: 0, percentage: 0)] { willSet { objectWillChange.send() }}
-   public func generatePercentForAnswer(trueAnswer: Int) -> [AnswerData] {
+    
+    public func generatePercentForAnswer(trueAnswer: Int) -> [AnswerData] {
+        var data: [AnswerData] = []
+        data.append(AnswerData(answerNumber: trueAnswer, percentage: truePercent))
+        var tempPercent: Int = 0
         
-        for i in 0...3 {
-            if i == trueAnswer - 1 {
-                data[i] = AnswerData(answerNumber: i, percentage: truePercent)
-            } else {
-                var percentSum: Int = 0
-                for answer in data {
-                    percentSum += answer.percentage
-                }
-                percentSum += 100
-                percentSum  -= truePercent
-                data[i] = AnswerData(answerNumber: i, percentage: Int.random(in: 0...percentSum))
+        for  index in 0...3  {
+            if index != trueAnswer {
+                tempPercent = 100 - truePercent - tempPercent
+                tempPercent = Int.random(in: 0...tempPercent)
+                data.append(AnswerData(answerNumber: index, percentage: tempPercent))
             }
         }
-
-       return data
+        return data
     }
-
+    
 }

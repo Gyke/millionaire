@@ -47,7 +47,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var friendButton: UIButton!
     
     @IBOutlet weak var chartView: UIView!
-    
+   
+    @IBOutlet weak var viewOneHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewFourHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewThreeHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewTwoHeight: NSLayoutConstraint!
     //MARK: - Variables
     
     
@@ -148,9 +152,27 @@ class GameViewController: UIViewController {
     
     //MARK: - Methods
     
-    func makeChartView()  {
+    func makeChartView(answerPercent: [AnswerData])  {
+        
+        for answer in answerPercent {
+            switch answer.answerNumber {
+            case 0:
+                viewOneHeight.constant = CGFloat(answer.percentage)
+            case 1:
+                viewTwoHeight.constant = CGFloat(answer.percentage)
+            case 2:
+                viewThreeHeight.constant = CGFloat(answer.percentage)
+            case 3:
+                viewFourHeight.constant = CGFloat(answer.percentage)
+            default:
+                return
+                
+            }
+        }
         
         chartView.isHidden = false
+        
+        
     }
     @objc func updateTimer() {
         if totalTime != 0 {
@@ -224,11 +246,9 @@ extension GameViewController: MillionaireViewProtocol {
             hallCloseView.alpha = 1.0
             hallCloseView.isUserInteractionEnabled = false
             hallButton.isUserInteractionEnabled = false
-            makeChartView()
+            
             if let chartData = answerPercent{
-                ChartView().moveBar(chartData: chartData)
-                self.view.layoutIfNeeded()
-                ChartView().layoutIfNeeded()
+                makeChartView(answerPercent: chartData)
             }
             
         case .callToFriends:
