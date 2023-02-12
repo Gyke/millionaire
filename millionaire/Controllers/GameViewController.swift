@@ -94,7 +94,7 @@ class GameViewController: UIViewController {
                 answerThreeButton.isUserInteractionEnabled = false
                 answerFourButton.isUserInteractionEnabled = false
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
                     //Деактивизация кнопок подсказок
                     self.fiftyButton.isEnabled = true
                     self.hallButton.isEnabled = true
@@ -280,7 +280,7 @@ extension GameViewController: MillionaireViewProtocol {
             rightToMakeMistake = true
             setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {self.musicGame.play(sound: "zvuk-fon")})
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {self.musicGame.play(sound: "zvuk-fon")})
         } else {
             musicGame.stop()
             musicGame.play(sound: "wrongAnswer")
