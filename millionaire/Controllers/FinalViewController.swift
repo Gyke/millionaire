@@ -38,7 +38,7 @@ class FinalViewController: UIViewController {
     @IBAction func playAgeinButtonPressed(_ sender: UIButton) {
         
         musicEnd.stop()
-        
+        rightToMakeMistake = false
         self.performSegue(withIdentifier: "goToGame", sender: self)
     }
     

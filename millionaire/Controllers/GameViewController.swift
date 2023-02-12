@@ -14,8 +14,6 @@ class GameViewController: UIViewController {
     
 
     let musicGame = AudioPlayer()
-    var count = 0
-
     //MARK: - IBOutlets
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -82,34 +80,45 @@ class GameViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction func answerTapped(_ sender: UIButton) {
-        
         //Музака напряженная перед ответом
         musicGame.play(sound: "zvuk-napryajeniya-pered-otv")
-        
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
-                count += 1
-                if count == 2 {
+                
+                //Деактивизация кнопок подсказок
+                fiftyButton.isEnabled = false
+                hallButton.isEnabled = false
+                friendButton.isEnabled = false
+                getPrizeButton.isEnabled = false
+                
+                //Деактивизация кнопок вариантов ответов
+                answerOneButton.isUserInteractionEnabled = false
+                answerTwoButton.isUserInteractionEnabled = false
+                answerThreeButton.isUserInteractionEnabled = false
+                answerFourButton.isUserInteractionEnabled = false
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(9), execute: {
                     //Деактивизация кнопок подсказок
-                    fiftyButton.isEnabled = false
-                    hallButton.isEnabled = false
-                    friendButton.isEnabled = false
-                    getPrizeButton.isEnabled = false
+                    self.fiftyButton.isEnabled = true
+                    self.hallButton.isEnabled = true
+                    self.friendButton.isEnabled = true
+                    self.getPrizeButton.isEnabled = true
                     
                     //Деактивизация кнопок вариантов ответов
-                    answerOneButton.isUserInteractionEnabled = false
-                    answerTwoButton.isUserInteractionEnabled = false
-                    answerThreeButton.isUserInteractionEnabled = false
-                    answerFourButton.isUserInteractionEnabled = false
-                    
-                }
+                    self.answerOneButton.isUserInteractionEnabled = true
+                    self.answerTwoButton.isUserInteractionEnabled = true
+                    self.answerThreeButton.isUserInteractionEnabled = true
+                    self.answerFourButton.isUserInteractionEnabled = true
+
+                })
+                
                 
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
         }
-        timer.invalidate()
     }
+    
     
     @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
         timer.invalidate()
@@ -189,8 +198,22 @@ class GameViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-            musicGame.stop()
-            self.performSegue(withIdentifier: "goToResult", sender: self)
+            //Деактивизация кнопок подсказок
+            fiftyButton.isEnabled = false
+            hallButton.isEnabled = false
+            friendButton.isEnabled = false
+            getPrizeButton.isEnabled = false
+            
+            //Деактивизация кнопок вариантов ответов
+            answerOneButton.isUserInteractionEnabled = false
+            answerTwoButton.isUserInteractionEnabled = false
+            answerThreeButton.isUserInteractionEnabled = false
+            answerFourButton.isUserInteractionEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7), execute: {
+                self.musicGame.stop()
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            })
+            
         }
         
     }
@@ -228,9 +251,11 @@ extension GameViewController: MillionaireViewProtocol {
     //MARK: - View - Success
     
     func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int, answerPercent: [AnswerData]?) {
-        
+        timer.invalidate()
         switch successType {
         case .answer:
+           
+            
             //проигрываем музыку правильного ответа
             musicGame.stop()
             musicGame.play(sound: "correctAnswer")
@@ -241,6 +266,7 @@ extension GameViewController: MillionaireViewProtocol {
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                 self.performSegue(withIdentifier: "goToResult", sender: self)
             })
+            
         case .hintFifty:
             
             fiftyCloseView.alpha = 1.0
@@ -267,15 +293,17 @@ extension GameViewController: MillionaireViewProtocol {
     //MARK: - View - Failure
     
     func failure(numberOfQuestion: Int, numberOfAnswer: Int) {
-        //проигрываем музыку в случае неудачи
-        musicGame.stop()
-        musicGame.play(sound: "wrongAnswer")
+
+        if rightToMakeMistake == false {
+            musicGame.stop()
+            musicGame.play(sound: "wrongAnswer")
+            rightToMakeMistake = true
+            setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
             
-        
-        setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
-        
-        
-        if count == 2 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {self.musicGame.play(sound: "zvuk-fon")})
+        } else {
+            musicGame.stop()
+            musicGame.play(sound: "wrongAnswer")
             setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
             
             if let index = millionaire.question.answerOptions.firstIndex(where: {$0 == millionaire.question.answer}) {
@@ -284,8 +312,11 @@ extension GameViewController: MillionaireViewProtocol {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                 self.performSegue(withIdentifier: "goToResult", sender: self)
+                self.musicGame.stop()
             })
+            timer.invalidate()
         }
+        
         
     }
     
