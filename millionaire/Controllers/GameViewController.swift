@@ -53,7 +53,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var viewTwoHeight: NSLayoutConstraint!
     //MARK: - Variables
     
-    
+
     var timer = Timer()
     var totalTime = 30
     
@@ -298,6 +298,12 @@ extension GameViewController: MillionaireViewProtocol {
             musicGame.stop()
             musicGame.play(sound: "wrongAnswer")
             rightToMakeMistake = true
+            
+            millionaire.isHintTapped[2] = true
+            friendCloseView.alpha = 1
+            friendCloseView.isUserInteractionEnabled = false
+            friendButton.isUserInteractionEnabled = false
+            
             setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {self.musicGame.play(sound: "zvuk-fon")})
