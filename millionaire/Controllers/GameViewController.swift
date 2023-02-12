@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     
 
     let musicGame = AudioPlayer()
-    
+    var count = 0
 
     //MARK: - IBOutlets
     
@@ -29,7 +29,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerTwoButton: UIButton!
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
-    
+    @IBOutlet weak var getPrizeButton: UIButton!
+
     @IBOutlet weak var answerOneOutletView: UIView!
     @IBOutlet weak var answerTwoOutletView: UIView!
     @IBOutlet weak var answerThreeOutletView: UIView!
@@ -88,16 +89,21 @@ class GameViewController: UIViewController {
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
-                
-                //Деактивизация кнопок подсказок
-                fiftyButton.isEnabled = false
-                hallButton.isEnabled = false
-                friendButton.isEnabled = false
-                //Деактивизация кнопок вариантов ответов
-                answerOneButton.isUserInteractionEnabled = false
-                answerTwoButton.isUserInteractionEnabled = false
-                answerThreeButton.isUserInteractionEnabled = false
-                answerFourButton.isUserInteractionEnabled = false
+                count += 1
+                if count == 2 {
+                    //Деактивизация кнопок подсказок
+                    fiftyButton.isEnabled = false
+                    hallButton.isEnabled = false
+                    friendButton.isEnabled = false
+                    getPrizeButton.isEnabled = false
+                    
+                    //Деактивизация кнопок вариантов ответов
+                    answerOneButton.isUserInteractionEnabled = false
+                    answerTwoButton.isUserInteractionEnabled = false
+                    answerThreeButton.isUserInteractionEnabled = false
+                    answerFourButton.isUserInteractionEnabled = false
+                    
+                }
                 
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
@@ -184,7 +190,7 @@ class GameViewController: UIViewController {
         } else {
             timer.invalidate()
             musicGame.stop()
-            self.performSegue(withIdentifier: "goToFinish", sender: self)
+            self.performSegue(withIdentifier: "goToResult", sender: self)
         }
         
     }
@@ -261,21 +267,25 @@ extension GameViewController: MillionaireViewProtocol {
     //MARK: - View - Failure
     
     func failure(numberOfQuestion: Int, numberOfAnswer: Int) {
-        
         //проигрываем музыку в случае неудачи
         musicGame.stop()
         musicGame.play(sound: "wrongAnswer")
             
         
-        setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
+        setButtonBackground(answerNumber: numberOfAnswer, colour: .grey)
         
-        if let index = millionaire.question.answerOptions.firstIndex(where: {$0 == millionaire.question.answer}) {
-            setButtonBackground(answerNumber: index + 1, colour: .green)
+        
+        if count == 2 {
+            setButtonBackground(answerNumber: numberOfAnswer, colour: .red)
+            
+            if let index = millionaire.question.answerOptions.firstIndex(where: {$0 == millionaire.question.answer}) {
+                setButtonBackground(answerNumber: index + 1, colour: .green)
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            })
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-            self.performSegue(withIdentifier: "goToResult", sender: self)
-        })
         
     }
     
@@ -304,7 +314,11 @@ extension GameViewController: MillionaireViewProtocol {
             view.questionNumber = millionaire.numberOfQuestion
             view.answerResult = millionaire.answerResult
             view.isHint = millionaire.isHintTapped
-            view.money = money[millionaire.numberOfQuestion - 1]
+            let moneyIndex = Int((millionaire.numberOfQuestion - 1) / 5)
+            view.money = moneyIndex == 0 ? 0 : money[5 * moneyIndex]
+        } else if segue.identifier == "goToFinish" {
+            let view = segue.destination as! FinalViewController
+            view.win = millionaire.numberOfQuestion == 1 ? 0 : money[millionaire.numberOfQuestion - 2]
         }
     }
     

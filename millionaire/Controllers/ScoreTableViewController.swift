@@ -34,27 +34,14 @@ class ScoreTableViewController: UIViewController {
     @IBOutlet weak var thirteenQuestionButton: UIButton!
     @IBOutlet weak var fourteenQuestionButton: UIButton!
     @IBOutlet weak var fifteenQuestionButton: UIButton!
-
+    var buttonsArray: [UIButton] = []
     
     
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
-        view.addGestureRecognizer(recognizer)
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    //MARK: - Methods
-    
-    func lightAnswer(result: Bool, questionNumber: Int) {
-        
-        let buttonsArray: [UIButton] = [
+        self.buttonsArray = [
             oneQuestionButton,
             twoQuestionButton,
             threeQuestionButton,
@@ -71,14 +58,32 @@ class ScoreTableViewController: UIViewController {
             fourteenQuestionButton,
             fifteenQuestionButton
         ]
+        buttonsArray.forEach({ $0.isUserInteractionEnabled = false })
+
+        recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
+        view.addGestureRecognizer(recognizer)
         
-        buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)
-        
-        
+        // Do any additional setup after loading the view.
     }
     
     
     
+    //MARK: - Methods
+    
+    func lightAnswer(result: Bool, questionNumber: Int) {
+        
+        buttonsArray[questionNumber - 1].setBackgroundImage(result == true ? ButtonColor.green.image : ButtonColor.red.image , for: .normal)
+        
+        //Изменение изображения кнопк, по мере привильх ответов от пользователя.
+        if result == true {
+            for i in 0..<questionNumber {
+                buttonsArray[i].setBackgroundImage(UIImage(named: "Rectangle green"), for: .normal)
+            }
+        }
+
+    
+        
+    }
 
     @objc func handleTapGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
         guard let result = answerResult else { return }
@@ -107,11 +112,6 @@ class ScoreTableViewController: UIViewController {
         guard let result = answerResult else { return }
         guard let number = questionNumber else { return }
         lightAnswer(result: result, questionNumber: number)
-//        if number < 15 {
-//            goToNextScreeWithDelay(result: result)
-//        } else {
-//            goToNextScreeWithDelay(result: false)
-//        }
     }
     
 
