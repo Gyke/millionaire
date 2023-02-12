@@ -7,6 +7,8 @@
 
 import Foundation
 
+public var rightToMakeMistake = false
+
 enum GameSuccessType {
     case answer
     case hintFifty
@@ -54,7 +56,6 @@ class Millionaire: MillionaireProtocol {
     
     func answerTapped(answer: String, numberOfAnswer: Int) {
         //Запускаем музыку
-        
         //даем паузу в пять секунд
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
             if answer == self.question.answer {
