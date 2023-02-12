@@ -14,7 +14,6 @@ class GameViewController: UIViewController {
     
 
     let musicGame = AudioPlayer()
-    var count = 0
     //MARK: - IBOutlets
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -77,49 +76,45 @@ class GameViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction func answerTapped(_ sender: UIButton) {
-        
         //Музака напряженная перед ответом
         musicGame.play(sound: "zvuk-napryajeniya-pered-otv")
-        
         for tag in 1...4 {
             if sender.tag == tag {
                 sender.setBackgroundImage( UIImage(named: "Rectangle purple") , for: .normal)
-                count += 1
-                if count == 2 {
+                
+                //Деактивизация кнопок подсказок
+                fiftyButton.isEnabled = false
+                hallButton.isEnabled = false
+                friendButton.isEnabled = false
+                getPrizeButton.isEnabled = false
+                
+                //Деактивизация кнопок вариантов ответов
+                answerOneButton.isUserInteractionEnabled = false
+                answerTwoButton.isUserInteractionEnabled = false
+                answerThreeButton.isUserInteractionEnabled = false
+                answerFourButton.isUserInteractionEnabled = false
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
                     //Деактивизация кнопок подсказок
-                    fiftyButton.isEnabled = false
-                    hallButton.isEnabled = false
-                    friendButton.isEnabled = false
-                    getPrizeButton.isEnabled = false
+                    self.fiftyButton.isEnabled = true
+                    self.hallButton.isEnabled = true
+                    self.friendButton.isEnabled = true
+                    self.getPrizeButton.isEnabled = true
                     
                     //Деактивизация кнопок вариантов ответов
-                    answerOneButton.isUserInteractionEnabled = false
-                    answerTwoButton.isUserInteractionEnabled = false
-                    answerThreeButton.isUserInteractionEnabled = false
-                    answerFourButton.isUserInteractionEnabled = false
-                    
-                    count = 0
-                } else if count == 1 && rightToMakeMistake == true {
-                    //Деактивизация кнопок подсказок
-                    fiftyButton.isEnabled = false
-                    hallButton.isEnabled = false
-                    friendButton.isEnabled = false
-                    getPrizeButton.isEnabled = false
-                    
-                    //Деактивизация кнопок вариантов ответов
-                    answerOneButton.isUserInteractionEnabled = false
-                    answerTwoButton.isUserInteractionEnabled = false
-                    answerThreeButton.isUserInteractionEnabled = false
-                    answerFourButton.isUserInteractionEnabled = false
-                    
-                    count = 0
-                }
+                    self.answerOneButton.isUserInteractionEnabled = true
+                    self.answerTwoButton.isUserInteractionEnabled = true
+                    self.answerThreeButton.isUserInteractionEnabled = true
+                    self.answerFourButton.isUserInteractionEnabled = true
+
+                })
+                
                 
                 millionaire.answerTapped(answer: millionaire.question.answerOptions[tag - 1], numberOfAnswer: tag)
             }
         }
-//        timer.invalidate()
     }
+    
     
     @IBAction func getPrizeButtonTapped(_ sender: UIButton) {
         timer.invalidate()
@@ -181,8 +176,22 @@ class GameViewController: UIViewController {
             }
         } else {
             timer.invalidate()
-            musicGame.stop()
-            self.performSegue(withIdentifier: "goToResult", sender: self)
+            //Деактивизация кнопок подсказок
+            fiftyButton.isEnabled = false
+            hallButton.isEnabled = false
+            friendButton.isEnabled = false
+            getPrizeButton.isEnabled = false
+            
+            //Деактивизация кнопок вариантов ответов
+            answerOneButton.isUserInteractionEnabled = false
+            answerTwoButton.isUserInteractionEnabled = false
+            answerThreeButton.isUserInteractionEnabled = false
+            answerFourButton.isUserInteractionEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7), execute: {
+                self.musicGame.stop()
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            })
+            
         }
         
     }
@@ -220,10 +229,10 @@ extension GameViewController: MillionaireViewProtocol {
     //MARK: - View - Success
     
     func success(successType: GameSuccessType, numberOfQuestion: Int, numberOfAnswer: Int, answerPercent: [AnswerData]?) {
-        
+        timer.invalidate()
         switch successType {
         case .answer:
-            timer.invalidate()
+           
             
             //проигрываем музыку правильного ответа
             musicGame.stop()
@@ -283,6 +292,7 @@ extension GameViewController: MillionaireViewProtocol {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                 self.performSegue(withIdentifier: "goToResult", sender: self)
+                self.musicGame.stop()
             })
             timer.invalidate()
         }
