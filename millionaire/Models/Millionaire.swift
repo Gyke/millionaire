@@ -7,6 +7,8 @@
 
 import Foundation
 
+public var rightToMakeMistake = false
+
 enum GameSuccessType {
     case answer
     case hintFifty
