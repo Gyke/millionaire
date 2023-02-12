@@ -521,7 +521,7 @@
                             <constraint firstItem="IVK-Q5-clF" firstAttribute="top" secondItem="JA6-6L-7Nk" secondAttribute="bottom" constant="86" id="76F-h3-nfc"/>
                             <constraint firstItem="2KI-CY-J1k" firstAttribute="trailing" secondItem="IVK-Q5-clF" secondAttribute="trailing" constant="37" id="7ju-lr-nOV"/>
                             <constraint firstItem="IVK-Q5-clF" firstAttribute="leading" secondItem="2KI-CY-J1k" secondAttribute="leading" constant="37" id="8CP-Xp-pIb"/>
-                            <constraint firstItem="LLs-6o-8iS" firstAttribute="top" secondItem="IVK-Q5-clF" secondAttribute="bottom" symbolic="YES" id="8XX-XM-EzQ"/>
+                            <constraint firstItem="LLs-6o-8iS" firstAttribute="top" secondItem="IVK-Q5-clF" secondAttribute="bottom" constant="8" symbolic="YES" id="8XX-XM-EzQ"/>
                             <constraint firstItem="LLs-6o-8iS" firstAttribute="leading" secondItem="2KI-CY-J1k" secondAttribute="leading" constant="10" id="BBB-sH-R7R"/>
                             <constraint firstItem="IVK-Q5-clF" firstAttribute="centerX" secondItem="2KI-CY-J1k" secondAttribute="centerX" id="Ht1-bJ-mbw"/>
                             <constraint firstItem="2KI-CY-J1k" firstAttribute="bottom" secondItem="LGO-vl-8XF" secondAttribute="bottom" constant="10" id="S9l-MH-Zr1"/>
@@ -1478,13 +1478,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mqV-9W-Wl0"/>
-        <segue reference="k51-Ej-cCA"/>
-        <segue reference="ZT9-cp-LXM"/>
-        <segue reference="jXF-OP-Ukq"/>
         <segue reference="e5B-T3-C6I"/>
-        <segue reference="ZT9-cp-LXM"/>
-        <segue reference="jXF-OP-Ukq"/>
         <segue reference="igJ-we-S7G"/>
         <segue reference="wY7-aJ-IAG"/>
     </inferredMetricsTieBreakers>
