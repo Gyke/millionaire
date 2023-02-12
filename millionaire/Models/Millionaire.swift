@@ -73,44 +73,30 @@ class Millionaire: MillionaireProtocol {
             return []
         case .hintFifty:
             isHintTapped[0] = true
-            let trueIndex = question.answerOptions.firstIndex(where: {$0 == question.answer})
             var hint: [Int] = [0, 0, 0, 0]
-            for i in 0...3 {
-                switch i {
-                case 0:
-                    if i == trueIndex { hint[i] = 50 } else { hint[i] = Bool.random() ? 50 : 0 }
-                case 1:
-                    if i == trueIndex { hint[i] = 50 } else { hint[i] = Bool.random() ? 50 : 0 }
-                case 2:
-                    
-                    if i == trueIndex {
-                        hint[i] = 50
-                        let res = hint.filter{ $0 > 0 }
-                        if res.count == 3 {
-                            hint[Int.random(in: 0...1)] = 0
-                        }
+            if let trueIndex = question.answerOptions.firstIndex(where: {$0 == question.answer}) {
+                
+                let index: Int = Int(trueIndex )
+                hint[index] = 50
+                var temp: [Int] = []
+                var i = 0
+                for hi in hint {
+                    if hi != 50 {
+                        temp.append(i)
+                        i += 1
                     } else {
-                        let res = hint.filter{ $0 > 0 }
-                        if res.count == 0 {
-                            hint[i]  = 50
-                        } else {
-                            hint[i] = Bool.random() ? 50 : 0
-                        }
+                        i += 1
                     }
-                case 3:
-                    let res = hint.filter{ $0 > 0 }
-                    if i == trueIndex {
-                        hint[i] = 50
-                        let res = hint.filter{ $0 > 0 }
-                        if res.count == 3 {
-                            hint[Int.random(in: 0...2)] = 0
-                        }
-                    } else { if res.count == 1 { hint[i] = 50 } else if res.count == 2 { hint[i] = 0 } }
-                default:
-                    break
+                    
                 }
+                let hintIndex = Int.random(in: 1...3)
+               hint[temp[hintIndex - 1]] = 50
+                
+                
             }
             return hint
+ 
+            
         case .hallAssistance:
             isHintTapped[1] = true
             let trueIndex = question.answerOptions.firstIndex(where: {$0 == question.answer})
