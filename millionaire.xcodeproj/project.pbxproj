@@ -29,7 +29,6 @@
 		51FFF4C42997C6A2007B063F /* podskazka-50-na-50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51FFF4C32997C6A2007B063F /* podskazka-50-na-50.mp3 */; };
 		51FFF4C62997C754007B063F /* rasskazyivayut-igroku-pravila.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51FFF4C52997C754007B063F /* rasskazyivayut-igroku-pravila.mp3 */; };
 		51FFF4C82997CC42007B063F /* zvuk-napryajeniya-pered-otv.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51FFF4C72997CC42007B063F /* zvuk-napryajeniya-pered-otv.mp3 */; };
-		5731725A299441A600C38F4C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57317259299441A600C38F4C /* RegisterViewController.swift */; };
 		5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731726229955C3D00C38F4C /* FinalViewController.swift */; };
 		583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583F1CAF29910D54004A4D37 /* RulesViewController.swift */; };
 		5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888ADD029915B2A002C00BE /* GameViewController.swift */; };
@@ -40,6 +39,8 @@
 		A54FDC9529959BD2004F514C /* ChartPrepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC9429959BD2004F514C /* ChartPrepare.swift */; };
 		A54FDC992996788E004F514C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54FDC982996788E004F514C /* ChartView.swift */; };
 		A5D3CA3129968B9A0009798D /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3CA3029968B9A0009798D /* ChartView.xib */; };
+		A5E886EC29997DA300A12F1A /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E886EB29997DA300A12F1A /* ResultTableViewCell.swift */; };
+		A5E886EE2999800100A12F1A /* FinalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E886ED2999800100A12F1A /* FinalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		A54FDC9429959BD2004F514C /* ChartPrepare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPrepare.swift; sourceTree = "<group>"; };
 		A54FDC982996788E004F514C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		A5D3CA3029968B9A0009798D /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		A5E886EB29997DA300A12F1A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		A5E886ED2999800100A12F1A /* FinalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				2F912006299028E6002978CE /* Millionaire.swift */,
+				A5E886ED2999800100A12F1A /* FinalController.swift */,
 				5160CCFB299169DC0070115E /* Question.swift */,
 				5160CCFD29916A120070115E /* QuizMillionaire.swift */,
 				A54FDC86299408A1004F514C /* ButtonsColor.swift */,
@@ -158,6 +162,7 @@
 				A54FDC982996788E004F514C /* ChartView.swift */,
 				57317259299441A600C38F4C /* RegisterViewController.swift */,
 				5731726229955C3D00C38F4C /* FinalViewController.swift */,
+				A5E886EB29997DA300A12F1A /* ResultTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,10 +293,12 @@
 				583F1CB029910D54004A4D37 /* RulesViewController.swift in Sources */,
 				2F912007299028E6002978CE /* Millionaire.swift in Sources */,
 				2F911FF02990288F002978CE /* AppDelegate.swift in Sources */,
+				A5E886EE2999800100A12F1A /* FinalController.swift in Sources */,
 				5731726329955C3D00C38F4C /* FinalViewController.swift in Sources */,
 				5189F2602992C2130091C636 /* AudioPlayer.swift in Sources */,
 				A54FDC9529959BD2004F514C /* ChartPrepare.swift in Sources */,
 				5888ADD129915B2A002C00BE /* GameViewController.swift in Sources */,
+				A5E886EC29997DA300A12F1A /* ResultTableViewCell.swift in Sources */,
 				A54FDC9329956946004F514C /* RegisterViewController.swift in Sources */,
 				A54FDC85299384DA004F514C /* ScoreTableViewController.swift in Sources */,
 				2F911FF22990288F002978CE /* SceneDelegate.swift in Sources */,
