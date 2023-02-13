@@ -117,20 +117,20 @@ extension FinalViewController: FinalControllerViewProtocol {
         case .loadDataOk:
             winAmount.text = "Вы заработали: \(String(finalController.moneyWin ?? 0))  ₽"
             if let result = finalController.result {
-                resultGameLabel.text = result ? "ПОБЕДА" : "ПРИГРЫШ"
+                resultGameLabel.text = result ? "ПОБЕДА" : "ПРОИГРЫШ"
             }
             tableView.reloadData()
         case .losOk:
             winAmount.text = String(finalController.moneyWin ?? 0) + " ₽"
             if let result = finalController.result {
-                resultGameLabel.text = result ? "ПОБЕДА" : "ПРИГРЫШ"
+                resultGameLabel.text = result ? "ПОБЕДА" : "ПРОИГРЫШ"
             }
             registerButton.isHidden = false
             tableView.reloadData()
         case .winOk:
             winAmount.text = String(finalController.moneyWin ?? 0) + " ₽"
             if let result = finalController.result {
-                resultGameLabel.text = result ? "ПОБЕДА" : "ПРИГРЫШ"
+                resultGameLabel.text = result ? "ПОБЕДА" : "ПРОИГРЫШ"
             }
             registerButton.isHidden = false
             tableView.reloadData()

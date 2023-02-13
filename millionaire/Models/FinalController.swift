@@ -49,6 +49,7 @@ class FinalControllerClass: FinalControllerProtocol {
             let saveDate = formatter.string(from: Date())
             userScoreData.append("\(userName)   \(saveDate)   \(moneyWin)")
             defaults.set(userScoreData, forKey: "winsList")
+            view?.success(successType: .saveOk)
         }
     }
     
