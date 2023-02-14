@@ -157,7 +157,7 @@ class GameViewController: UIViewController {
         case 2:
             hallCloseView.alpha = 1
             hallButton.isUserInteractionEnabled = false
-            let percent = millionaire.hintTapped(hintType: .hallAssistance)
+           //let percent = millionaire.hintTapped(hintType: .hallAssistance)
         case 3:
             return
         default:
@@ -355,7 +355,8 @@ extension GameViewController: MillionaireViewProtocol {
             view.money = moneyIndex == 0 ? 0 : money[5 * moneyIndex]
         } else if segue.identifier == "goToFinish" {
             let view = segue.destination as! FinalViewController
-            view.win = millionaire.numberOfQuestion == 1 ? 0 : money[millionaire.numberOfQuestion - 2]
+            let finalController = FinalControllerClass(view: view, result: false, moneyWin: millionaire.numberOfQuestion == 1 ? 0 : money[millionaire.numberOfQuestion - 2] )
+            view.finalController = finalController
         }
     }
     
