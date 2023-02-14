@@ -8,7 +8,7 @@
 import UIKit
 
 class ScoreTableViewController: UIViewController {
-
+    
     //MARK: - Variables
     
     var questionNumber: Int?
@@ -16,7 +16,7 @@ class ScoreTableViewController: UIViewController {
     var isHint: [Bool]?
     let recognizer = UITapGestureRecognizer()
     var money: Int?
-   
+    
     //MARK: - IBOutlet
     
     @IBOutlet weak var oneQuestionButton: UIButton!
@@ -59,7 +59,7 @@ class ScoreTableViewController: UIViewController {
             fifteenQuestionButton
         ]
         buttonsArray.forEach({ $0.isUserInteractionEnabled = false })
-
+        
         recognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
         view.addGestureRecognizer(recognizer)
         
@@ -80,24 +80,31 @@ class ScoreTableViewController: UIViewController {
                 buttonsArray[i].setBackgroundImage(UIImage(named: "Rectangle green"), for: .normal)
             }
         }
-
-    
+        
+        
         
     }
-
+    
     @objc func handleTapGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
         guard let result = answerResult else { return }
-        if result {
-            self.performSegue(withIdentifier: "returnToGame", sender: self)
+        guard let questionNumber = questionNumber else { return }
+        if questionNumber < 15 {
+            if result {
+                self.performSegue(withIdentifier: "returnToGame", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "goToFinish", sender: self)
+            }
+            
         } else {
             self.performSegue(withIdentifier: "goToFinish", sender: self)
         }
+        
     }
     
     func goToNextScreeWithDelay(result: Bool) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
-        
+            
             if result {
                 self.performSegue(withIdentifier: "returnToGame", sender: self)
             } else {
@@ -114,7 +121,7 @@ class ScoreTableViewController: UIViewController {
         lightAnswer(result: result, questionNumber: number)
     }
     
-
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -127,9 +134,10 @@ class ScoreTableViewController: UIViewController {
             view.millionaire = millionaire
         } else if segue.identifier == "goToFinish" {
             let view = segue.destination as! FinalViewController
-            view.result = "Проигрыш"
-            view.win = money
+            guard let result = answerResult else { return }
+            let finalController = FinalControllerClass(view: view, result: result, moneyWin: money ?? 0)
+            view.finalController = finalController
         }
     }
-
+    
 }
